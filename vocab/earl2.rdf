@@ -295,7 +295,7 @@
         <rdfs:label>Resolution of page</rdfs:label>
         <rdfs:comment>Resolución para renderización de la pagina a evaluar</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TestResolution"/>
+        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Resolution"/>
         <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
