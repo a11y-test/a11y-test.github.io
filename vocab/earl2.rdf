@@ -176,7 +176,7 @@
     <!--// ### EARL 2.0 properties - TOOL ### //-->
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#cagegory">
-        <rdfs:label>Category tool</rdfs:label>
+        <rdfs:label>category tool</rdfs:label>
         <rdfs:comment>Cagetoría a la que pertenece la herramienta.</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
@@ -184,7 +184,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#licence">
-        <rdfs:label>License type</rdfs:label>
+        <rdfs:label>license type</rdfs:label>
         <rdfs:comment>Tipo de licencia.</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
@@ -192,7 +192,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#guidelines">
-        <rdfs:label>Guidelines</rdfs:label>
+        <rdfs:label>guidelines</rdfs:label>
         <rdfs:comment>Guidelines that can be checked using a tool.</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Guideline"/>
@@ -200,7 +200,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#scopes">
-        <rdfs:label>Scope</rdfs:label>
+        <rdfs:label>scope</rdfs:label>
         <rdfs:comment>Supports automated checking of</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Guidelines"/>
@@ -208,7 +208,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#assistisBy">
-        <rdfs:label>Assistis by</rdfs:label>
+        <rdfs:label>assistis by</rdfs:label>
         <rdfs:comment>Tipo de asistencia generada</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Assistance"/>
@@ -216,7 +216,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#sopportedFormats">
-        <rdfs:label>Assistis by</rdfs:label>
+        <rdfs:label>assistis by</rdfs:label>
         <rdfs:comment>Sopported format for checks the accessibility</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Format"/>
@@ -224,7 +224,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#type">
-        <rdfs:label>Type tool</rdfs:label>
+        <rdfs:label>type tool</rdfs:label>
         <rdfs:comment>Tipo de herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TypeTool"/>
@@ -236,7 +236,7 @@
     <!--// ### EARL 2.0 properties - REQUEST ### //-->
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#source">
-        <rdfs:label>Source evaluation</rdfs:label>
+        <rdfs:label>source evaluation</rdfs:label>
         <rdfs:comment>Tipo de herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TestSource"/>
@@ -244,7 +244,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#code">
-        <rdfs:label>Code HTML</rdfs:label>
+        <rdfs:label>code HTML</rdfs:label>
         <rdfs:comment>Code HTML</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#SourceCode"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#HTML"/>
@@ -260,7 +260,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#file">
-        <rdfs:label>File</rdfs:label>
+        <rdfs:label>file</rdfs:label>
         <rdfs:comment>File in base64</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#SourceFile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2008/content#ContentAsBase64"/>
@@ -268,7 +268,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#headers">
-        <rdfs:label>Headers request</rdfs:label>
+        <rdfs:label>headers request</rdfs:label>
         <rdfs:comment>Headers request</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
         <rdfs:range rdf:resource="http://www.w3.org/2006/http#RequestHeader"/>
@@ -276,7 +276,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#testParams">
-        <rdfs:label>Test params</rdfs:label>
+        <rdfs:label>test params</rdfs:label>
         <rdfs:comment>Parámetros de características de la solicitud</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
@@ -284,7 +284,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#testParams">
-        <rdfs:label>Test params</rdfs:label>
+        <rdfs:label>test params</rdfs:label>
         <rdfs:comment>Parámetros de características de la solicitud</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
@@ -292,7 +292,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#resolution">
-        <rdfs:label>Resolution of page</rdfs:label>
+        <rdfs:label>resolution of page</rdfs:label>
         <rdfs:comment>Resolución para renderización de la pagina a evaluar</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Resolution"/>
@@ -300,24 +300,26 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#width">
-        <rdfs:label>With size</rdfs:label>
+        <rdfs:label>with size</rdfs:label>
         <rdfs:comment>Ancho</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Resolution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#heigth">
-        <rdfs:label>Heigth size</rdfs:label>
+        <rdfs:label>heigth size</rdfs:label>
         <rdfs:comment>Alto</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Resolution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#standard">
-        <rdfs:label>Standard</rdfs:label>
+        <rdfs:label>standard</rdfs:label>
         <rdfs:comment>Guidelines that can be checked using the tool</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Guideline"/>
@@ -325,7 +327,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#evaluation">
-        <rdfs:label>Evaluation Type</rdfs:label>
+        <rdfs:label>evaluation Type</rdfs:label>
         <rdfs:comment>Typo de evaluación a realizar</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationType"/>
@@ -334,7 +336,7 @@
 
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#params">
-        <rdfs:label>Other params</rdfs:label>
+        <rdfs:label>other params</rdfs:label>
         <rdfs:comment>Otros parametros pasados para la configuración de la evaluación</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Parameter"/>
@@ -342,7 +344,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#paramName">
-        <rdfs:label>Param Name</rdfs:label>
+        <rdfs:label>param Name</rdfs:label>
         <rdfs:comment>Nombre de parámetro</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Parameter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -350,7 +352,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#paramValue">
-        <rdfs:label>Param Value</rdfs:label>
+        <rdfs:label>param Value</rdfs:label>
         <rdfs:comment>Valor del parámetro</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Parameter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -358,7 +360,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#runOnly">
-        <rdfs:label>Run only rules</rdfs:label>
+        <rdfs:label>run only</rdfs:label>
         <rdfs:comment>Reglas o grupos de reglas a evaluar</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
@@ -366,7 +368,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#include">
-        <rdfs:label>Incude</rdfs:label>
+        <rdfs:label>incude</rdfs:label>
         <rdfs:comment>Reglas o grupos de reglas a incluir en la evaluación adicionales a las definidas en la propiedad :runOnly</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
@@ -374,7 +376,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#exclude">
-        <rdfs:label>Exclude</rdfs:label>
+        <rdfs:label>exclude</rdfs:label>
         <rdfs:comment>Reglas o grupos de reglas a excluir en la evaluación parte de las definidas en la propiedad :runOnly</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
@@ -382,7 +384,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#cases">
-        <rdfs:label>Test Cases</rdfs:label>
+        <rdfs:label>cases</rdfs:label>
         <rdfs:comment>Reglas parte de un grupo o categoría de reglas</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestCaseCategory"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCase"/>
