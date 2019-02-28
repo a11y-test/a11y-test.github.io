@@ -9,6 +9,18 @@
         xmlns:cnt="http://www.w3.org/2008/content#"
         xmlns:ptr="http://www.w3.org/2009/pointers#">
 
+<owl:Ontology rdf:about="">
+  <rdfs:label xml:lang="en">Proposal - Evaluation and Report Language (EARL) 2.0 Schema</rdfs:label>
+  <rdfs:comment xml:lang="en">Formal schema of the Evaluation and Report Language (EARL) 2.0</rdfs:comment>
+  <owl:versionInfo xml:lang="en">Working Draft 2019</owl:versionInfo>
+  <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/WAI/intro/earl" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/EARL10/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/HTTP-in-RDF/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/Content-in-RDF/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/Pointers-in-RDF/" />
+</owl:Ontology>
+
     <!--// ### EARL 2.0 Classes - TOOL ### //-->
 
 
@@ -536,19 +548,6 @@
             Tool that displays or marks elements of a web page or, in general, the user interface on the screen, helping the evaluator to check certain accessibility requirements.
         </dct:description>
     </rdf:Description>
-
-
-
-    
-
-        <rdf:Description rdf:about="#remediationTool">
-        <rdf:type rdf:resource="#CategoryTool"/>
-        <dct:title xml:lang="en">Remediation</dct:title>
-        <dct:description xml:lang="en">
-            Tool
-        </dct:description>
-    </rdf:Description>
-    
 
 
 </rdf:RDF>

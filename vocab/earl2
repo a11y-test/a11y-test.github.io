@@ -9,6 +9,18 @@
         xmlns:cnt="http://www.w3.org/2008/content#"
         xmlns:ptr="http://www.w3.org/2009/pointers#">
 
+<owl:Ontology rdf:about="">
+  <rdfs:label xml:lang="en">Proposal - Evaluation and Report Language (EARL) 2.0 Schema</rdfs:label>
+  <rdfs:comment xml:lang="en">Formal schema of the Evaluation and Report Language (EARL) 2.0</rdfs:comment>
+  <owl:versionInfo xml:lang="en">Working Draft 2019</owl:versionInfo>
+  <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/WAI/intro/earl" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/EARL10/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/HTTP-in-RDF/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/Content-in-RDF/" />
+  <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/Pointers-in-RDF/" />
+</owl:Ontology>
+
     <!--// ### EARL 2.0 Classes - TOOL ### //-->
 
 
@@ -414,7 +426,7 @@
 
     <rdf:Description rdf:about="#css">
         <rdf:type rdf:resource="#Format"/>
-        <rdf:about rdf:resource="https://www.w3.org/Style/CSS/">
+        <!--<rdf:about rdf:resource="https://www.w3.org/Style/CSS/"/>-->
         <dct:title xml:lang="en">CSS - Cascading Style Sheets</dct:title>
         <dct:description xml:lang="en">
             CSS is a language that describes the style of an HTML document.
@@ -423,7 +435,7 @@
 
     <rdf:Description rdf:about="#html">
         <rdf:type rdf:resource="#Format"/>
-        <rdf:about rdf:resource="https://www.w3.org/TR/html401/">
+        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
         <dct:title xml:lang="en">HTML</dct:title>
         <dct:description xml:lang="en">
             This specification defines the HyperText Markup Language (HTML), the publishing language of the World Wide Web. This specification defines HTML 4.01, which is a subversion of HTML 4.
@@ -481,5 +493,60 @@
         </dct:description>
     </rdf:Description>
 
+    <rdf:Description rdf:about="#assistiveTechnology">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Assistive Technology</dct:title>
+        <dct:description xml:lang="en">
+            It is a software tool that is used by people with disabilities, which allows you to test accessibility by putting yourself in the user's place. The specific type of technology is indicated in parentheses, such as: Braille Interface, Magnifier, Screen Reader, Switch Interface, Text Web Browser, User Interface Customizer, Voice Assistant
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#automaticTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Automatic Evaluation Tool</dct:title>
+        <dct:description xml:lang="en">
+            Tool that checks accessibility automatically
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#checklistTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Checklist</dct:title>
+        <dct:description xml:lang="en">
+            It is a list (it can be a simple document) that helps to record the compliance or not of accessibility requirements
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#monitoringService">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Monitoring Service</dct:title>
+        <dct:description xml:lang="en">
+            It is a service, normally paid, that obtains accessibility reports, either instantaneously, or after a set deadline when the report is completed with content provided by experts or users with disabilities
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#remediationTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Remediation Tool</dct:title>
+        <dct:description xml:lang="en">
+            Tool that automatically corrects accessibility errors, usually in a web page
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#simulatorTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">User Simulator Tool</dct:title>
+        <dct:description xml:lang="en">
+            Software that simulates some type of user, for example users with a visual disability, that allows to put themselves in the user's place to check the barriers offered by the content accessed with the simulated disability.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#visualizationTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Visualization Tool</dct:title>
+        <dct:description xml:lang="en">
+            Tool that displays or marks elements of a web page or, in general, the user interface on the screen, helping the evaluator to check certain accessibility requirements.
+        </dct:description>
+    </rdf:Description>
 
 </rdf:RDF>
