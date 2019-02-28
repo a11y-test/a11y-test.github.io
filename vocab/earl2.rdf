@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<rdf:RDF xml:base=""
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl"
+        xmlns:earl="http://www.w3.org/ns/earl#"
+        xmlns:dct="http://purl.org/dc/terms/"
+        xmlns:http="http://www.w3.org/2006/http#"
+        xmlns:cnt="http://www.w3.org/2008/content#"
+        xmlns:ptr="http://www.w3.org/2009/pointers#">
+
+    <!--// ### EARL 2.0 Classes - TOOL ### //-->
+
+
+    <rdfs:Class rdf:about="#EvaluationTool">
+        <rdfs:label>EvaluationTool</rdfs:label>
+ 3        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/earl#Software"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#Guideline">
+        <rdfs:label>Guideline</rdfs:label>
+        <rdfs:comment>Guidelines that can be checked using a tool</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#CategoryTool">
+        <rdfs:label>CategoryTool</rdfs:label>
+        <rdfs:comment>Indicates the category of the tool, according to the functionality provided</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#Scope">
+        <rdfs:label>Scope</rdfs:label>
+        <rdfs:comment>Indicates the object or property whose accessibility is to be evaluated</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#Licence">
+        <rdfs:label>Licence</rdfs:label>
+        <rdfs:comment>Indicates the conditions of use of the tool</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="#Assistance">
+        <rdfs:label>Assistance</rdfs:label>
+        <rdfs:comment>Indicates the type of assistance offered by the tool**</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#Format">
+        <rdfs:label>Format</rdfs:label>
+        <rdfs:comment>Indicates the supported formats. Most evaluation tools check the accessibility of HTML content. 
+            Some check other web technologies, such as WAI-ARIA, CSS, SVG, and PDF.**</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#TypeTool">
+        <rdfs:label>TypeTool</rdfs:label>
+        <rdfs:comment>Indicates the specific type of the tool, according to how it is used or installed.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+
+    <!--// ### EARL 2.0 Classes - REQUEST ### //-->
+    
+    <rdfs:Class rdf:about="#TestRequest">
+        <rdfs:label>TestRequest</rdfs:label>
+        <rdfs:comment>Representa una solicitud de evaluación</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#TestSource">
+        <rdfs:label>TestSource</rdfs:label>
+        <rdfs:comment>Representa el recurso que se desea evaluar</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#SourceURL">
+        <rdfs:label>SourceURL</rdfs:label>
+        <rdfs:comment>Una URL como objeto de evaluación</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="#TestSource"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#SourceCode">
+        <rdfs:label>SourceCode</rdfs:label>
+        <rdfs:comment>Código HTML como recurso de evaluación</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="#TestSource"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#SourceFile">
+        <rdfs:label>SourceFile</rdfs:label>
+        <rdfs:comment>Archivo como recurso de evaluación</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="#TestSource"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#ResultConfiguration">
+        <rdfs:label>ResultConfiguration</rdfs:label>
+        <rdfs:comment>Parametros de configuración de la respuesta o reporte de evaluación esperado</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#ResultType">
+        <rdfs:label>ResultType</rdfs:label>
+        <rdfs:comment>Tipo de resultado esperado o devuelto, como una advertencia, un error, un exito, etc.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#TestConfiguration">
+        <rdfs:label>TestConfiguration</rdfs:label>
+        <rdfs:comment>Parametros de configuración de la solicitud de evaluación</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#Resolution">
+        <rdfs:label>Resolution</rdfs:label>
+        <rdfs:comment>Propiedades de dimensionamiento del visor sobre el que se desea evaluar o se evaluo el recurso solicitado</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#EvaluationType">
+        <rdfs:label>EvaluationType</rdfs:label>
+        <rdfs:comment>Tipo de evaluación solicitada, como podría ser. completa, parcial o escífica</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#Parameter">
+        <rdfs:label>Parameter</rdfs:label>
+        <rdfs:comment>Define un parámetro tipo clave - valor</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#TestCaseCategory">
+        <rdfs:label>TestCaseCategory</rdfs:label>
+        <rdfs:comment>Grupo o categoría de earl:TestCase que permite agrupar o clasificarlos.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdfs:Class>
+
+    <!--// ### EARL 2.0 properties - TOOL ### //-->
+
+    <rdf:Property rdf:about="#cagegory">
+        <rdfs:label>Category tool</rdfs:label>
+        <rdfs:comment>Cagetoría a la que pertenece la herramienta.</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#CategoryTool"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#licence">
+        <rdfs:label>License type</rdfs:label>
+        <rdfs:comment>Tipo de licencia.</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Licence"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#guidelines">
+        <rdfs:label>Guidelines</rdfs:label>
+        <rdfs:comment>Guidelines that can be checked using a tool.</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Guideline"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#scopes">
+        <rdfs:label>Scope</rdfs:label>
+        <rdfs:comment>Supports automated checking of</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Guidelines"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#assistisBy">
+        <rdfs:label>Assistis by</rdfs:label>
+        <rdfs:comment>Tipo de asistencia generada</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Assistance"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#sopportedFormats">
+        <rdfs:label>Assistis by</rdfs:label>
+        <rdfs:comment>Sopported format for checks the accessibility</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Format"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#type">
+        <rdfs:label>Type tool</rdfs:label>
+        <rdfs:comment>Tipo de herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#TypeTool"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+
+
+    <!--// ### EARL 2.0 properties - REQUEST ### //-->
+
+    <rdf:Property rdf:about="#source">
+        <rdfs:label>Source evaluation</rdfs:label>
+        <rdfs:comment>Tipo de herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestRequest"/>
+        <rdfs:range rdf:resource="#TestSource"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#code">
+        <rdfs:label>Code HTML</rdfs:label>
+        <rdfs:comment>Code HTML</rdfs:comment>
+        <rdfs:domain rdf:resource="#SourceCode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#HTML"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#url">
+        <rdfs:label>URL</rdfs:label>
+        <rdfs:comment>URL</rdfs:comment>
+        <rdfs:domain rdf:resource="#SourceURL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#file">
+        <rdfs:label>File</rdfs:label>
+        <rdfs:comment>File in base64</rdfs:comment>
+        <rdfs:domain rdf:resource="#SourceFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2008/content#ContentAsBase64"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#headers">
+        <rdfs:label>Headers request</rdfs:label>
+        <rdfs:comment>Headers request</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/http#RequestHeader"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#testParams">
+        <rdfs:label>Test params</rdfs:label>
+        <rdfs:comment>Parámetros de características de la solicitud</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestRequest"/>
+        <rdfs:range rdf:resource="#TestConfiguration"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#testParams">
+        <rdfs:label>Test params</rdfs:label>
+        <rdfs:comment>Parámetros de características de la solicitud</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestRequest"/>
+        <rdfs:range rdf:resource="#TestConfiguration"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#resolution">
+        <rdfs:label>Resolution of page</rdfs:label>
+        <rdfs:comment>Resolución para renderización de la pagina a evaluar</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#TestResolution"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#width">
+        <rdfs:label>With size</rdfs:label>
+        <rdfs:comment>Ancho</rdfs:comment>
+        <rdfs:domain rdf:resource="#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#heigth">
+        <rdfs:label>Heigth size</rdfs:label>
+        <rdfs:comment>Alto</rdfs:comment>
+        <rdfs:domain rdf:resource="#Resolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+
+    <rdf:Property rdf:about="#standard">
+        <rdfs:label>Standard</rdfs:label>
+        <rdfs:comment>Guidelines that can be checked using the tool</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#Guideline"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#evaluation">
+        <rdfs:label>Evaluation Type</rdfs:label>
+        <rdfs:comment>Typo de evaluación a realizar</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#EvaluationType"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+
+    <rdf:Property rdf:about="#params">
+        <rdfs:label>Other params</rdfs:label>
+        <rdfs:comment>Otros parametros pasados para la configuración de la evaluación</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#Parameter"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#paramName">
+        <rdfs:label>Param Name</rdfs:label>
+        <rdfs:comment>Nombre de parámetro</rdfs:comment>
+        <rdfs:domain rdf:resource="#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#paramValue">
+        <rdfs:label>Param Value</rdfs:label>
+        <rdfs:comment>Valor del parámetro</rdfs:comment>
+        <rdfs:domain rdf:resource="#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#runOnly">
+        <rdfs:label>Run only rules</rdfs:label>
+        <rdfs:comment>Reglas o grupos de reglas a evaluar</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#include">
+        <rdfs:label>Incude</rdfs:label>
+        <rdfs:comment>Reglas o grupos de reglas a incluir en la evaluación adicionales a las definidas en la propiedad :runOnly</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#exclude">
+        <rdfs:label>Exclude</rdfs:label>
+        <rdfs:comment>Reglas o grupos de reglas a excluir en la evaluación parte de las definidas en la propiedad :runOnly</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#cases">
+        <rdfs:label>Test Cases</rdfs:label>
+        <rdfs:comment>Reglas parte de un grupo o categoría de reglas</rdfs:comment>
+        <rdfs:domain rdf:resource="#TestCaseCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCase"/>
+        <rdfs:isDefinedBy rdf:resource=""/>
+    </rdf:Property>
+
+    <!--// ### EARL 2.0 instances - TOOL ### //-->
+
+    <rdf:Description rdf:about="#freesoftware">
+        <rdf:type rdf:resource="#Licence"/>
+        <dct:title xml:lang="en">Free Software</dct:title>
+        <dct:description xml:lang="en">
+            A free-software license is a notice that grants the recipient of a piece of software extensive rights to modify and redistribute that software.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#opensource">
+        <rdf:type rdf:resource="#Licence"/>
+        <dct:title xml:lang="en">Open Source</dct:title>
+        <dct:description xml:lang="en">
+            Open source licenses are licenses that comply with the Open Source Definition — in brief, they allow software to be freely used, modified, and shared.
+        </dct:description>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="#singlepage">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Single web pages</dct:title>
+        <dct:description xml:lang="en">
+            The tool evaluates the accessibility of an individual web page.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#grouppage">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Groups of web pages or web sites</dct:title>
+        <dct:description xml:lang="en">
+            The tool evaluates the accessibility of a group of web pages, normally included in the same website.
+        </dct:description>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="#css">
+        <rdf:type rdf:resource="#Format"/>
+        <rdf:about rdf:resource="https://www.w3.org/Style/CSS/">
+        <dct:title xml:lang="en">CSS - Cascading Style Sheets</dct:title>
+        <dct:description xml:lang="en">
+            CSS is a language that describes the style of an HTML document.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#html">
+        <rdf:type rdf:resource="#Format"/>
+        <rdf:about rdf:resource="https://www.w3.org/TR/html401/">
+        <dct:title xml:lang="en">HTML</dct:title>
+        <dct:description xml:lang="en">
+            This specification defines the HyperText Markup Language (HTML), the publishing language of the World Wide Web. This specification defines HTML 4.01, which is a subversion of HTML 4.
+        </dct:description>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="#reports">
+        <rdf:type rdf:resource="#Assistance"/>
+        <dct:title xml:lang="en">Reports</dct:title>
+        <dct:description xml:lang="en">
+            Reports are useful to determine the conformance of the checkpoints that can be automatically checked.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#stepByStep">
+        <rdf:type rdf:resource="#Assistance"/>
+        <dct:title xml:lang="en">Step-by-step evaluations</dct:title>
+        <dct:description xml:lang="en">
+            Wizard-based evaluation tools guide users through sequences of checks. They conduct automated checks and prompt the user to manually assess the rest. For example, a wizard-based tool may check images for alternate text. The user then evaluates how appropriate the alternate text is.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#inPageFeedback">
+        <rdf:type rdf:resource="#Assistance"/>
+        <dct:title xml:lang="en">In-page feedback</dct:title>
+        <dct:description xml:lang="en">
+            This feature inserts temporary icons and markup to display results of accessibility checks. They are useful to view issues in context. They are also useful to understand the relative importance of each issue.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#pageTransformation">
+        <rdf:type rdf:resource="#Assistance"/>
+        <dct:title xml:lang="en">Page transformation</dct:title>
+        <dct:description xml:lang="en">
+            Transformation tools change the appearance of a site to help identify design issues. For example, the tool may show the site in text only or without color. These tools are useful to compensate for the limitations of automated testing.
+        </dct:description>
+    </rdf:Description>
+
+    <!--// ### EARL 2.0 instances - REQUEST ### //-->
+
+    <rdf:Description rdf:about="#error">
+        <rdf:type rdf:resource="#ResultType"/>
+        <dct:title xml:lang="en">Error</dct:title>
+        <dct:description xml:lang="en">
+            Error found in testing
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#warning">
+        <rdf:type rdf:resource="#ResultType"/>
+        <dct:title xml:lang="en">Warning</dct:title>
+        <dct:description xml:lang="en">
+            Warning when processing test, required confirmation
+        </dct:description>
+    </rdf:Description>
+
+
+</rdf:RDF>
