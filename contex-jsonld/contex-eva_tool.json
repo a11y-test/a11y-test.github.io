@@ -1,0 +1,30 @@
+{
+    "@context": {
+      "@vocab": "https://a11y-test.github.io/vocab/earl2#",
+      "earl2": "https://a11y-test.github.io/vocab/earl2#",
+      "doap": "http://usefulinc.com/ns/doap#",
+      "earl": "http://www.w3.org/ns/earl#",
+      "ptr": "http://www.w3.org/2009/pointers#",
+      "foaf": "http://xmlns.com/foaf/spec/#",
+      "schema": "http://schema.org/",
+      "dct": "http://purl.org/dc/terms/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+
+      "name": "doap:name",
+      "title": "dct:title",
+      "description": "doap:description",
+      "created": "doap:created",
+      "homepage": { "@id": "schema:url", "@type":"@id"},
+      "release": { "@type": "doap:Version"},
+      "revision": "doap:revision",
+      "aboutAccessibility": { "@id": "schema:url", "@type":"@id"},
+      "vendor" : "doap:vendor",
+      "language": { "@id": "dct:language", "@container" : "@list"},
+      "guidelines": { "@id": "dct:language", "@container" : "@list"},
+      "license": { "@id": "earl2:License", "@type":"@id"},
+      "scopes": { "@id": "earl2:Scope", "@type":"@id", "@container" : "@list"},
+      "sopportedFormats": { "@id": "earl2:WebTechnology", "@type":"@id", "@container" : "@list"},
+      "type": { "@id": "earl2:TypeTool", "@type":"@id"}
+    }
+}

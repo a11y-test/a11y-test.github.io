@@ -40,7 +40,7 @@
         <rdfs:comment xml:lang="es">Representación de una tecnología web posible de verificar accesibilidad.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdfs:Class>
+    </rdfs:Class> 
 
     <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#Assistance">
         <rdfs:label>Assistance</rdfs:label>
@@ -207,6 +207,17 @@
         <rdfs:comment>Estándares soportados por la herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
         <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Guideline"/>
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+    </rdf:Property>
+
+
+    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#title">
+        <rdfs:label>title</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Disability"/>
+        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Guideline"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title">
+        <rdfs:range rdf:resource="rdf:Literal"/>
         <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 

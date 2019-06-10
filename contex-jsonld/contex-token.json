@@ -1,0 +1,10 @@
+{
+    "@context": {
+        "earl2": "https://a11y-test.github.io/vocab/earl2#",
+
+        "@type": "earl2:TokenResponse",
+        "accessToken": "earl2:accessToken",
+        "tokenType": "earl2:tokenType",
+        "expiresIn": "earl2:expiresIn"
+    }
+}

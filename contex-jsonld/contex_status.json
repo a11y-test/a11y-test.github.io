@@ -1,0 +1,10 @@
+{
+    "@context": {
+        "earl2": "https://a11y-test.github.io/vocab/earl2#",
+
+        "@type": "earl2:StatusResponse",
+        "code": "earl2:code",
+        "httpStatusCode": "earl2:httpStatusCode",
+        "messsage": "earl2:messsage"
+    }
+}
