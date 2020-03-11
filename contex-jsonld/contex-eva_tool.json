@@ -24,7 +24,10 @@
       "category": { "@id": "earl2:CategoryTool", "@type":"@id"},
       "guidelines": { "@id": "earl2:Guideline", "@container" : "@list"}, 
       "languages": { "@id": "dct:language", "@container" : "@list"},  
-      "license": { "@id": "earl2:License", "@type":"@id"},
+      "license": { 
+        "@id": "earl2:License", 
+        "@type":"@id"
+      },
       "release": { "@type": "doap:Version"},
       "scopes": { "@id": "earl2:Scope", "@type":"@id", "@container" : "@list"},
       "sopportedFormats": { "@id": "earl2:WebTechnology", "@type":"@id", "@container" : "@list"},

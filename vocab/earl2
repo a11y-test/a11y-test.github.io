@@ -154,6 +154,7 @@
     
     <rdf:Property rdf:about="#scopes">
         <rdfs:label>scopes</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#" />
         <rdfs:comment>Ámbitos de evaluación que permite la herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
         <rdfs:range rdf:resource="#Scope"/>
