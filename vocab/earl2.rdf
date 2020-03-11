@@ -7,6 +7,7 @@
         xmlns:earl="http://www.w3.org/ns/earl#"
         xmlns:dct="http://purl.org/dc/terms/"
         xmlns:schema="http://schema.org/"
+        xmlns:doap="http://usefulinc.com/ns/doap#"
         xmlns:http="http://www.w3.org/2006/http#"
         xmlns:cnt="http://www.w3.org/2008/content#"
         xmlns:ptr="http://www.w3.org/2009/pointers#">
@@ -125,7 +126,7 @@
         <rdfs:label>languages</rdfs:label>
         <rdfs:comment>Lista de idiomas soportados sea en la presentación de resultado o en el análisis</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language"/>
         <rdfs:range rdf:resource="rdf:Literal"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -514,7 +515,7 @@
         <dct:description xml:lang="en">
            Web Content Accessibility Guidelines (WCAG) 2.1
         </dct:description>
-        <doap:homepoge>https://www.w3.org/TR/WCAG21/</doap:homepoge>
+        <doap:homepage>https://www.w3.org/TR/WCAG21/</doap:homepage>
     </rdf:Description>
 
     <rdf:Description rdf:about="#wcag20">
@@ -523,7 +524,7 @@
         <dct:description xml:lang="en">
            Web Content Accessibility Guidelines (WCAG) 2.0
         </dct:description>
-        <doap:homepoge>https://www.w3.org/TR/WCAG20/</doap:homepoge>
+        <doap:homepage>https://www.w3.org/TR/WCAG20/</doap:homepage>
     </rdf:Description>
 
     <rdf:Description rdf:about="#wcag10">
@@ -532,7 +533,7 @@
         <dct:description xml:lang="en">
            Web Content Accessibility Guidelines (WCAG) 1.0
         </dct:description>
-        <doap:homepoge>https://www.w3.org/TR/WAI-WEBCONTENT/</doap:homepoge>
+        <doap:homepage>https://www.w3.org/TR/WAI-WEBCONTENT/</doap:homepage>
     </rdf:Description>
 
     <rdf:Description rdf:about="#bitv">
