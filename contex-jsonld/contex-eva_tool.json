@@ -1,7 +1,7 @@
 {
     "@context": {
-      "@vocab": "https://a11y-test.github.io/vocab/earl2#",
-      "earl2": "https://a11y-test.github.io/vocab/earl2#",
+      "@vocab": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#",
+      "earl2": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#",
       "doap": "http://usefulinc.com/ns/doap#",
       "earl": "http://www.w3.org/ns/earl#",
       "ptr": "http://www.w3.org/2009/pointers#",
