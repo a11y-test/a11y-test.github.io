@@ -14,7 +14,7 @@
       "title": "dct:title",
       "description": "doap:description",
       "created": "doap:created",
-      "homepage": "doap:homepoge",
+      "homepage": "doap:homepage",
       "aboutAccessibility": { "@id": "schema:url", "@type":"@id"},
       "assistsBy": { "@id": "earl2:Assistance", "@container" : "@list"},
       "category": { "@id": "earl2:CategoryTool", "@type":"@id"},
