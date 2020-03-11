@@ -10,21 +10,21 @@
       "dct": "http://purl.org/dc/terms/",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
 
-
       "name": "doap:name",
       "title": "dct:title",
       "description": "doap:description",
       "created": "doap:created",
-      "homepage": { "@id": "schema:url", "@type":"@id"},
-      "release": { "@type": "doap:Version"},
-      "revision": "doap:revision",
+      "homepage": "doap:homepoge",
       "aboutAccessibility": { "@id": "schema:url", "@type":"@id"},
-      "vendor" : "doap:vendor",
-      "language": { "@id": "dct:language", "@container" : "@list"},
-      "guidelines": { "@id": "dct:language", "@container" : "@list"},
+      "assistsBy": { "@id": "earl2:Assistance", "@container" : "@list"},
+      "category": { "@id": "earl2:CategoryTool", "@type":"@id"},
+      "guidelines": { "@id": "earl2:Guideline", "@container" : "@list"}, 
+      "languages": { "@id": "dct:language", "@container" : "@list"},  
       "license": { "@id": "earl2:License", "@type":"@id"},
+      "release": { "@type": "doap:Version"},
       "scopes": { "@id": "earl2:Scope", "@type":"@id", "@container" : "@list"},
       "sopportedFormats": { "@id": "earl2:WebTechnology", "@type":"@id", "@container" : "@list"},
-      "type": { "@id": "earl2:TypeTool", "@type":"@id"}
+      "type": { "@id": "earl2:TypeTool", "@type":"@id"},
+      "vendor" : "doap:vendor"
     }
 }

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding='UTF-8'?>
 <rdf:RDF 
+        xml:base=""
         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
         xmlns:owl="http://www.w3.org/2002/07/owl"
         xmlns:earl="http://www.w3.org/ns/earl#"
-        xmlns:earl2="https://a11y-test.github.io/vocab/earl2#"
         xmlns:dct="http://purl.org/dc/terms/"
         xmlns:schema="http://schema.org/"
         xmlns:http="http://www.w3.org/2006/http#"
         xmlns:cnt="http://www.w3.org/2008/content#"
         xmlns:ptr="http://www.w3.org/2009/pointers#">
 
-    <owl:Ontology rdf:about="https://a11y-test.github.io/vocab/earl2#">
+    <owl:Ontology rdf:about="">
         <rdfs:label xml:lang="en">Proposal - Evaluation and Report Language (EARL) 2.0 Schema</rdfs:label>
         <rdfs:comment xml:lang="en">Formal schema of the Evaluation and Report Language (EARL) 2.0</rdfs:comment>
         <owl:versionInfo xml:lang="en">Working Draft 2019</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/" />
+        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/" />
         <rdfs:seeAlso rdf:resource="http://www.w3.org/WAI/intro/earl" />
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/EARL10/" />
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/HTTP-in-RDF/" />
@@ -25,709 +25,949 @@
 
     <!--// ### EARL 2.0 Classes - TOOL ### //-->
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#EvaluationTool">
+    <rdfs:Class rdf:about="#EvaluationTool">
         <rdfs:label>EvaluationTool</rdfs:label>
         <rdfs:comment xml:lang="es">Representación de las características de una herramienta y los servicios que provee</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/earl#Software"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdfs:Class>
 
-    
-
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#WebTechnology">
-        <rdfs:label>WebTechnology</rdfs:label>
-        <rdfs:comment xml:lang="es">Representación de una tecnología web posible de verificar accesibilidad.</rdfs:comment>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdfs:Class>
-
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#Assistance">
+    <rdfs:Class rdf:about="#Assistance">
         <rdfs:label>Assistance</rdfs:label>
         <rdfs:comment xml:lang="es">Define el o los niveles de asistencia de una herramienta para la identificación de los resultados o hallazgos de la evaluación</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#Guideline">
-        <rdfs:label>Guideline</rdfs:label>
-        <rdfs:comment xml:lang="es">Define un estándar de accesibilidad</rdfs:comment>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdfs:Class>
-
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#TypeTool">
-        <rdfs:label>TypeTool</rdfs:label>
-        <rdfs:comment>Indicates the specific type of the tool, according to how it is used or installed.</rdfs:comment>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdfs:Class>
-
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#CategoryTool">
+    <rdfs:Class rdf:about="#CategoryTool">
         <rdfs:label>CategoryTool</rdfs:label>
         <rdfs:comment>Indicates the category of the tool, according to the functionality provided</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#Licence">
-        <rdfs:label>Licence</rdfs:label>
+    <rdfs:Class rdf:about="#Guideline">
+        <rdfs:label>Guideline</rdfs:label>
+        <rdfs:comment xml:lang="es">Define un estándar de accesibilidad</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="#License">
+        <rdfs:label>License</rdfs:label>
         <rdfs:comment>Indicates the conditions of use of the tool</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#Scope">
+    <rdfs:Class rdf:about="#Scope">
         <rdfs:label>Scope</rdfs:label>
         <rdfs:comment xml:lang="es">Representación del ámbito o cobertura de evaluación de una herramienta</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdfs:Class>
+
+    <rdfs:Class rdf:about="#WebTechnology">
+        <rdfs:label>WebTechnology</rdfs:label>
+        <rdfs:comment xml:lang="es">Representación de una tecnología web posible de verificar accesibilidad.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdfs:Class> 
+
+    <rdfs:Class rdf:about="#TypeTool">
+        <rdfs:label>TypeTool</rdfs:label>
+        <rdfs:comment>Indicates the specific type of the tool, according to how it is used or installed.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdfs:Class>
+
+    
+    <!--// ### EARL 2.0 properties - TOOL ### //-->
+
+    <rdf:Property rdf:about="#aboutAccessibility">
+        <rdfs:label>about accessibility</rdfs:label>
+        <rdfs:comment xml:lang="es">Dirección web de información de la accesibilidad de la herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="schema:url"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#assistisBy">
+        <rdfs:label>assistis by</rdfs:label>
+        <rdfs:comment xml:lang="es">Niveles de asistencia para la identificación de fallos o incidencias encontradas que permite la herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Assistance"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#cagegory">
+        <rdfs:label>category tool</rdfs:label>
+        <rdfs:comment xml:lang="es">Categoría de la herramienta según el tipo de servicio proporcionado</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#CategoryTool"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#guidelines">
+        <rdfs:label>guidelines</rdfs:label>
+        <rdfs:comment>Estándares soportados por la herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Guideline"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#title">
+        <rdfs:label>languages</rdfs:label>
+        <rdfs:comment>Lista de idiomas soportados sea en la presentación de resultado o en el análisis</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language">
+        <rdfs:range rdf:resource="rdf:Literal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+    
+
+    <rdf:Property rdf:about="#licence">
+        <rdfs:label>license type</rdfs:label>
+        <rdfs:comment xml:lang="es">Tipo de licencia o condiciones de uso de la herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Licence"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+
+    <rdf:Property rdf:about="#release">
+        <rdfs:label>release tool</rdfs:label>
+        <rdfs:comment xml:lang="es">Versión última liberada de la herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="http://usefulinc.com/ns/doap#Version"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="#scopes">
+        <rdfs:label>scopes</rdfs:label>
+        <rdfs:comment>Ámbitos de evaluación que permite la herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#Scope"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#sopportedFormats">
+        <rdfs:label>sopported Formats</rdfs:label>
+        <rdfs:comment>Tecnologías web posibles de verificar por la herramienta</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#WebTechnology"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#type">
+        <rdfs:label>type tool</rdfs:label>
+        <rdfs:comment>Tipo de herramienta de acuerdo con la forma de uso</rdfs:comment>
+        <rdfs:domain rdf:resource="#EvaluationTool"/>
+        <rdfs:range rdf:resource="#TypeTool"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+    
+
+    <!-- 
+
+    <rdf:Property rdf:about="#title">
+        <rdfs:label>title</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:domain rdf:resource="#Disability"/>
+        <rdfs:domain rdf:resource="#Guideline"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title">
+        <rdfs:range rdf:resource="rdf:Literal"/>
+    </rdf:Property>
+
+    -->
+    
 
     <!--// ### EARL 2.0 Classes - REQUEST ### 
     
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#TestRequest">
+    <rdfs:Class rdf:about="#TestRequest">
         <rdfs:label>TestRequest</rdfs:label>
         <rdfs:comment>Representa una solicitud de evaluación</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#TestSource">
+    <rdfs:Class rdf:about="#TestSource">
         <rdfs:label>TestSource</rdfs:label>
         <rdfs:comment>Representa el recurso que se desea evaluar</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#SourceURL">
+    <rdfs:Class rdf:about="#SourceURL">
         <rdfs:label>SourceURL</rdfs:label>
         <rdfs:comment>Una URL como objeto de evaluación</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:subClassOf rdf:resource="https://a11y-test.github.io/vocab/earl2#TestSource"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:subClassOf rdf:resource="#TestSource"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#SourceCode">
+    <rdfs:Class rdf:about="#SourceCode">
         <rdfs:label>SourceCode</rdfs:label>
         <rdfs:comment>Código HTML como recurso de evaluación</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:subClassOf rdf:resource="https://a11y-test.github.io/vocab/earl2#TestSource"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:subClassOf rdf:resource="#TestSource"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#SourceFile">
+    <rdfs:Class rdf:about="#SourceFile">
         <rdfs:label>SourceFile</rdfs:label>
         <rdfs:comment>Archivo como recurso de evaluación</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:subClassOf rdf:resource="https://a11y-test.github.io/vocab/earl2#TestSource"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:subClassOf rdf:resource="#TestSource"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#ResultConfiguration">
+    <rdfs:Class rdf:about="#ResultConfiguration">
         <rdfs:label>ResultConfiguration</rdfs:label>
         <rdfs:comment>Parametros de configuración de la respuesta o reporte de evaluación esperado</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#ResultType">
+    <rdfs:Class rdf:about="#ResultType">
         <rdfs:label>ResultType</rdfs:label>
         <rdfs:comment>Tipo de resultado esperado o devuelto, como una advertencia, un error, un exito, etc.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#TestConfiguration">
+    <rdfs:Class rdf:about="#TestConfiguration">
         <rdfs:label>TestConfiguration</rdfs:label>
         <rdfs:comment>Parametros de configuración de la solicitud de evaluación</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#Resolution">
+    <rdfs:Class rdf:about="#Resolution">
         <rdfs:label>Resolution</rdfs:label>
         <rdfs:comment>Propiedades de dimensionamiento del visor sobre el que se desea evaluar o se evaluo el recurso solicitado</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#EvaluationType">
+    <rdfs:Class rdf:about="#EvaluationType">
         <rdfs:label>EvaluationType</rdfs:label>
         <rdfs:comment>Tipo de evaluación solicitada, como podría ser. completa, parcial o escífica</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#Parameter">
+    <rdfs:Class rdf:about="#Parameter">
         <rdfs:label>Parameter</rdfs:label>
         <rdfs:comment>Define un parámetro tipo clave - valor</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
-    <rdfs:Class rdf:about="https://a11y-test.github.io/vocab/earl2#TestCaseCategory">
+    <rdfs:Class rdf:about="#TestCaseCategory">
         <rdfs:label>TestCaseCategory</rdfs:label>
         <rdfs:comment>Grupo o categoría de earl:TestCase que permite agrupar o clasificarlos.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdfs:Class>
 
     //-->
 
-    <!--// ### EARL 2.0 properties - TOOL ### //-->
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#aboutAccessibility">
-        <rdfs:label>about accessibility</rdfs:label>
-        <rdfs:comment xml:lang="es">Categoría de un EvaluationTool según el tipo de servicio proporcionado</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="schema:url"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#assistisBy">
-        <rdfs:label>assistis by</rdfs:label>
-        <rdfs:comment xml:lang="es">Niveles de asistencia para la identificación de fallos o incidencias encontradas que permite la herramienta</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Assistance"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#cagegory">
-        <rdfs:label>category tool</rdfs:label>
-        <rdfs:comment xml:lang="es">Categoría de un EvaluationTool según el tipo de servicio proporcionado</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#guidelines">
-        <rdfs:label>guidelines</rdfs:label>
-        <rdfs:comment>Estándares soportados por la herramienta</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Guideline"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#licence">
-        <rdfs:label>license type</rdfs:label>
-        <rdfs:comment xml:lang="es">Tipo de licencia o condiciones de uso de la herramienta</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
-
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#release">
-        <rdfs:label>release tool</rdfs:label>
-        <rdfs:comment xml:lang="es">Versión última liberada de la herramienta</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
     
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#scopes">
-        <rdfs:label>scopes</rdfs:label>
-        <rdfs:comment>Ámbitos de evaluación que permite la herramienta</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Guidelines"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#sopportedFormats">
-        <rdfs:label>sopported Formats</rdfs:label>
-        <rdfs:comment>Tecnologías web posibles de verificar por la herramienta</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Format"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
-
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#type">
-        <rdfs:label>type tool</rdfs:label>
-        <rdfs:comment>Tipo de herramienta de acuerdo con la forma de uso</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationTool"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TypeTool"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
-    </rdf:Property>
 
 
     <!--// ### EARL 2.0 properties - REQUEST ### 
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#source">
+    <rdf:Property rdf:about="#source">
         <rdfs:label>source evaluation</rdfs:label>
         <rdfs:comment>Tipo de herramienta</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TestSource"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:domain rdf:resource="#TestRequest"/>
+        <rdfs:range rdf:resource="#TestSource"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#code">
+    <rdf:Property rdf:about="#code">
         <rdfs:label>code HTML</rdfs:label>
         <rdfs:comment>Code HTML</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#SourceCode"/>
+        <rdfs:domain rdf:resource="#SourceCode"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#HTML"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#url">
+    <rdf:Property rdf:about="#url">
         <rdfs:label>URL</rdfs:label>
         <rdfs:comment>URL</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#SourceURL"/>
+        <rdfs:domain rdf:resource="#SourceURL"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#URL"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#file">
+    <rdf:Property rdf:about="#file">
         <rdfs:label>file</rdfs:label>
         <rdfs:comment>File in base64</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#SourceFile"/>
+        <rdfs:domain rdf:resource="#SourceFile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2008/content#ContentAsBase64"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#headers">
+    <rdf:Property rdf:about="#headers">
         <rdfs:label>headers request</rdfs:label>
         <rdfs:comment>Headers request</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
+        <rdfs:domain rdf:resource="#TestRequest"/>
         <rdfs:range rdf:resource="http://www.w3.org/2006/http#RequestHeader"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#testParams">
+    <rdf:Property rdf:about="#testParams">
         <rdfs:label>test params</rdfs:label>
         <rdfs:comment>Parámetros de características de la solicitud</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:domain rdf:resource="#TestRequest"/>
+        <rdfs:range rdf:resource="#TestConfiguration"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#testParams">
+    <rdf:Property rdf:about="#testParams">
         <rdfs:label>test params</rdfs:label>
         <rdfs:comment>Parámetros de características de la solicitud</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestRequest"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:domain rdf:resource="#TestRequest"/>
+        <rdfs:range rdf:resource="#TestConfiguration"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#resolution">
+    <rdf:Property rdf:about="#resolution">
         <rdfs:label>resolution of page</rdfs:label>
         <rdfs:comment>Resolución para renderización de la pagina a evaluar</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Resolution"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#Resolution"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#width">
+    <rdf:Property rdf:about="#width">
         <rdfs:label>with size</rdfs:label>
         <rdfs:comment>Ancho</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Resolution"/>
+        <rdfs:domain rdf:resource="#Resolution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#heigth">
+    <rdf:Property rdf:about="#heigth">
         <rdfs:label>heigth size</rdfs:label>
         <rdfs:comment>Alto</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Resolution"/>
+        <rdfs:domain rdf:resource="#Resolution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#standard">
+    <rdf:Property rdf:about="#standard">
         <rdfs:label>standard</rdfs:label>
         <rdfs:comment>Guidelines that can be checked using the tool</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Guideline"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#Guideline"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#evaluation">
+    <rdf:Property rdf:about="#evaluation">
         <rdfs:label>evaluation Type</rdfs:label>
         <rdfs:comment>Typo de evaluación a realizar</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#EvaluationType"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#EvaluationType"/>
     </rdf:Property>
 
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#params">
+    <rdf:Property rdf:about="#params">
         <rdfs:label>other params</rdfs:label>
         <rdfs:comment>Otros parametros pasados para la configuración de la evaluación</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
-        <rdfs:range rdf:resource="https://a11y-test.github.io/vocab/earl2#Parameter"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
+        <rdfs:range rdf:resource="#Parameter"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#paramName">
+    <rdf:Property rdf:about="#paramName">
         <rdfs:label>param Name</rdfs:label>
         <rdfs:comment>Nombre de parámetro</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Parameter"/>
+        <rdfs:domain rdf:resource="#Parameter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#paramValue">
+    <rdf:Property rdf:about="#paramValue">
         <rdfs:label>param Value</rdfs:label>
         <rdfs:comment>Valor del parámetro</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#Parameter"/>
+        <rdfs:domain rdf:resource="#Parameter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#runOnly">
+    <rdf:Property rdf:about="#runOnly">
         <rdfs:label>run only</rdfs:label>
         <rdfs:comment>Reglas o grupos de reglas a evaluar</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#include">
+    <rdf:Property rdf:about="#include">
         <rdfs:label>incude</rdfs:label>
         <rdfs:comment>Reglas o grupos de reglas a incluir en la evaluación adicionales a las definidas en la propiedad :runOnly</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#exclude">
+    <rdf:Property rdf:about="#exclude">
         <rdfs:label>exclude</rdfs:label>
         <rdfs:comment>Reglas o grupos de reglas a excluir en la evaluación parte de las definidas en la propiedad :runOnly</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestConfiguration"/>
+        <rdfs:domain rdf:resource="#TestConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCriterion"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="https://a11y-test.github.io/vocab/earl2#cases">
+    <rdf:Property rdf:about="#cases">
         <rdfs:label>cases</rdfs:label>
         <rdfs:comment>Reglas parte de un grupo o categoría de reglas</rdfs:comment>
-        <rdfs:domain rdf:resource="https://a11y-test.github.io/vocab/earl2#TestCaseCategory"/>
+        <rdfs:domain rdf:resource="#TestCaseCategory"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/earl#TestCase"/>
-        <rdfs:isDefinedBy rdf:resource="https://a11y-test.github.io/vocab/earl2#"/>
     </rdf:Property>
 
     //-->
 
-    <!--// ### EARL 2.0 instances - TOOL ### //-->
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#freeSoftware">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
-        <dct:title xml:lang="en">Free Software</dct:title>
-        <dct:description xml:lang="en">
-            A free-software license is a notice that grants the recipient of a piece of software extensive rights to modify and redistribute that software.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#openSource">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
-        <dct:title xml:lang="en">Open Source</dct:title>
-        <dct:description xml:lang="en">
-            Open source licenses are licenses that comply with the Open Source Definition — in brief, they allow software to be freely used, modified, and shared.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#commercial">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
-        <dct:title xml:lang="en">Commercial</dct:title>
-        <dct:description xml:lang="en">
-
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#enterprise">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
-        <dct:title xml:lang="en">Enterprise</dct:title>
-        <dct:description xml:lang="en">
-        
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#trial">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Licence"/>
-        <dct:title xml:lang="en">Trial or demo</dct:title>
-        <dct:description xml:lang="en">
-        
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#webPage">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Single web pages</dct:title>
-        <dct:description xml:lang="en">
-            The tool evaluates the accessibility of an individual web page.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#webSite">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Groups of web pages or web sites</dct:title>
-        <dct:description xml:lang="en">
-            The tool evaluates the accessibility of a group of web pages, normally included in the same website.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#colorContrast">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Color contrast</dct:title>
-        <dct:description xml:lang="en">
-            The tool is specific to assess the appropriate contrast between colors.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#desktopApplication">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Desktop Application</dct:title>
-        <dct:description xml:lang="en">
-            The tool evaluates the accessibility of a desktop application.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#desktopApplication">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Document</dct:title>
-        <dct:description xml:lang="en">
-            The tool evaluates the accessibility of the content of a document, such as pdf, docx, pptx, xslx, epub, video , animation.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#javascriptCode">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Javascript Code</dct:title>
-        <dct:description xml:lang="en">
-            The tool analyzes the existence of accessibility problems if a certain JavaScript code is executed.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#mobileApplication">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Mobile Application</dct:title>
-        <dct:description xml:lang="en">
-            The tool detects accessibility problems in a smartphone or tablet application.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#software">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Software</dct:title>
-        <dct:description xml:lang="en">
-            The tool (usually a checklist) can help evaluate the accessibility of any non-web software.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#textReadability">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">Text Readability</dct:title>
-        <dct:description xml:lang="en">
-            The tool is specific to evaluate the readability of a piece of text..
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#userInterface">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Scope"/>
-        <dct:title xml:lang="en">User Interface</dct:title>
-        <dct:description xml:lang="en">
-            The tool (usually an assistive technology or an user simulator) helps to evaluate possible accessibility problems presented by the user interface of any type of application or document.
-        </dct:description>
-    </rdf:Description>
+    <!--// ### EARL 2.0 instances - Assistance ### //-->
 
 
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#css">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/Style/CSS/"/>-->
-        <dct:title xml:lang="en">CSS - Cascading Style Sheets</dct:title>
-        <dct:description xml:lang="en">
-            CSS is a language that describes the style of an HTML document.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#html">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">HTML - Hypertext Markup Language</dct:title>
-        <dct:description xml:lang="en">
-            This specification defines the HyperText Markup Language (HTML), the publishing language of the World Wide Web. This specification defines HTML 4.01, which is a subversion of HTML 4.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#xhtml">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">HTML - eXtensible Hypertext Markup Language</dct:title>
-        <dct:description xml:lang="en">
-            This specification defines the HyperText Markup Language (HTML), the publishing language of the World Wide Web. This specification defines HTML 4.01, which is a subversion of HTML 4.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#aria">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">WAI ARIA</dct:title>
-        <dct:description xml:lang="en">
-            The Accessible Rich Internet Applications Suite, defines a way to make Web content and Web applications more accessible to people with disabilities. It especially helps with dynamic content and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#pdfDocument">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">PDF Document</dct:title>
-        <dct:description xml:lang="en">
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#officeDocument">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">MS Office Document</dct:title>
-        <dct:description xml:lang="en">
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#openDocument">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">Open Document (ODF)</dct:title>
-        <dct:description xml:lang="en">
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#smil">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">SMIL (Synchronized Multimedia Integration Language)</dct:title>
-        <dct:description xml:lang="en">
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#svg">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">SVG (Scalable Vector Graphics)</dct:title>
-        <dct:description xml:lang="en">
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#text">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">Plain text</dct:title>
-        <dct:description xml:lang="en">
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#multimedia">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Technology"/>
-        <!--<rdf:about rdf:resource="https://www.w3.org/TR/html401/" />-->
-        <dct:title xml:lang="en">Multimedia files</dct:title>
-        <dct:description xml:lang="en">
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#reports">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Assistance"/>
+    <rdf:Description rdf:about="#reports">
+        <rdf:type rdf:resource="#Assistance"/>
         <dct:title xml:lang="en">Reports</dct:title>
         <dct:description xml:lang="en">
             Reports are useful to determine the conformance of the checkpoints that can be automatically checked.
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#stepByStep">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Assistance"/>
+    <rdf:Description rdf:about="#stepByStep">
+        <rdf:type rdf:resource="#Assistance"/>
         <dct:title xml:lang="en">Step-by-step evaluations</dct:title>
         <dct:description xml:lang="en">
             Wizard-based evaluation tools guide users through sequences of checks. They conduct automated checks and prompt the user to manually assess the rest. For example, a wizard-based tool may check images for alternate text. The user then evaluates how appropriate the alternate text is.
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#inPageFeedback">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Assistance"/>
+    <rdf:Description rdf:about="#inPageFeedback">
+        <rdf:type rdf:resource="#Assistance"/>
         <dct:title xml:lang="en">In-page feedback</dct:title>
         <dct:description xml:lang="en">
             This feature inserts temporary icons and markup to display results of accessibility checks. They are useful to view issues in context. They are also useful to understand the relative importance of each issue.
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#pageTransformation">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#Assistance"/>
+    <rdf:Description rdf:about="#pageTransformation">
+        <rdf:type rdf:resource="#Assistance"/>
         <dct:title xml:lang="en">Page transformation</dct:title>
         <dct:description xml:lang="en">
             Transformation tools change the appearance of a site to help identify design issues. For example, the tool may show the site in text only or without color. These tools are useful to compensate for the limitations of automated testing.
         </dct:description>
     </rdf:Description>
 
-    <!--// ### EARL 2.0 instances - REQUEST ### //-->
+   
+    <!--// ### EARL 2.0 instances - CategoryTool ### //-->
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#error">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#ResultType"/>
-        <dct:title xml:lang="en">Error</dct:title>
-        <dct:description xml:lang="en">
-            Error found in testing
+    
+    <rdf:Description rdf:about="#automaticEvaluationTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Automatic Evaluation</dct:title>
+        <dct:description xml:lang="es">
+           Tool that checks accessibility automatically
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#warning">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#ResultType"/>
-        <dct:title xml:lang="en">Warning</dct:title>
-        <dct:description xml:lang="en">
-            Warning when processing test, required confirmation
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#assistiveTechnology">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
-        <dct:title xml:lang="en">Assistive Technology</dct:title>
-        <dct:description xml:lang="en">
-            It is a software tool that is used by people with disabilities, which allows you to test accessibility by putting yourself in the user's place. The specific type of technology is indicated in parentheses, such as: Braille Interface, Magnifier, Screen Reader, Switch Interface, Text Web Browser, User Interface Customizer, Voice Assistant
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#automaticTool">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
-        <dct:title xml:lang="en">Automatic Evaluation Tool</dct:title>
-        <dct:description xml:lang="en">
-            Tool that checks accessibility automatically
-        </dct:description>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#checklistTool">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
+    <rdf:Description rdf:about="#checklistTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
         <dct:title xml:lang="en">Checklist</dct:title>
         <dct:description xml:lang="en">
             It is a list (it can be a simple document) that helps to record the compliance or not of accessibility requirements
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#monitoringService">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
+    <rdf:Description rdf:about="#monitoringService">
+        <rdf:type rdf:resource="#CategoryTool"/>
         <dct:title xml:lang="en">Monitoring Service</dct:title>
         <dct:description xml:lang="en">
             It is a service, normally paid, that obtains accessibility reports, either instantaneously, or after a set deadline when the report is completed with content provided by experts or users with disabilities
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#remediationTool">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
+    <rdf:Description rdf:about="#remediationTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
         <dct:title xml:lang="en">Remediation Tool</dct:title>
         <dct:description xml:lang="en">
             Tool that automatically corrects accessibility errors, usually in a web page
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#simulatorTool">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
+    <rdf:Description rdf:about="#simulatorTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
         <dct:title xml:lang="en">User Simulator Tool</dct:title>
         <dct:description xml:lang="en">
             Software that simulates some type of user, for example users with a visual disability, that allows to put themselves in the user's place to check the barriers offered by the content accessed with the simulated disability.
         </dct:description>
     </rdf:Description>
 
-    <rdf:Description rdf:about="https://a11y-test.github.io/vocab/earl2#visualizationTool">
-        <rdf:type rdf:resource="https://a11y-test.github.io/vocab/earl2#CategoryTool"/>
+    <rdf:Description rdf:about="#visualizationTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Visualization Tool</dct:title>
+        <dct:description xml:lang="en">
+            Tool that displays or marks elements of a web page or, in general, the user interface on the screen, helping the evaluator to check certain accessibility requirements.
+        </dct:description>
+    </rdf:Description>
+
+
+
+    <!--// ### EARL 2.0 instances - Guideline ### //-->
+
+    <rdf:Description rdf:about="#wcag21">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">WCAG 2.1</dct:title>
+        <dct:description xml:lang="en">
+           Web Content Accessibility Guidelines (WCAG) 2.1
+        </dct:description>
+        <doap:homepoge>https://www.w3.org/TR/WCAG21/</doap:homepoge>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#wcag20">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">WCAG 2.0</dct:title>
+        <dct:description xml:lang="en">
+           Web Content Accessibility Guidelines (WCAG) 2.0
+        </dct:description>
+        <doap:homepoge>https://www.w3.org/TR/WCAG20/</doap:homepoge>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#wcag10">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">WCAG 1.0</dct:title>
+        <dct:description xml:lang="en">
+           Web Content Accessibility Guidelines (WCAG) 1.0
+        </dct:description>
+        <doap:homepoge>https://www.w3.org/TR/WAI-WEBCONTENT/</doap:homepoge>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#bitv">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">BITV</dct:title>
+        <dct:description xml:lang="es">
+           BITV - Norma de accesibilidad del gobierno alemán
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#jis">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">JIS</dct:title>
+        <dct:description xml:lang="es">
+           JIS - Estándar japonés de accesibilidad de la industria
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#rgaa">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">RGAA</dct:title>
+        <dct:description xml:lang="es">
+           RGAA - Norma de accesibilidad del gobierno francés
+        </dct:description>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="#maag10">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">MAAG 1.0</dct:title>
+        <dct:description xml:lang="es">
+           MAAG 1.0 - Estándar de accesibilidad del gobierno de Corea
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#section508">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">Section 508</dct:title>
+        <dct:description xml:lang="es">
+           Sección 508 - Norma de accesibilidad de contratación federal de los Estados Unidos
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#stancaAct">
+        <rdf:type rdf:resource="#Guideline"/>
+        <dct:title xml:lang="en">Stanca ACT</dct:title>
+        <dct:description xml:lang="es">
+           Ley Stanca - Legislación de accesibilidad italiana
+        </dct:description>
+    </rdf:Description>
+
+    <!--// ### EARL 2.0 instances - License ### //-->
+
+    <rdf:Description rdf:about="#freeSoftware">
+        <rdf:type rdf:resource="#Licence"/>
+        <dct:title xml:lang="en">Free Software</dct:title>
+        <dct:description xml:lang="en">
+            A free-software license is a notice that grants the recipient of a piece of software extensive rights to modify and redistribute that software.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#openSource">
+        <rdf:type rdf:resource="#Licence"/>
+        <dct:title xml:lang="en">Open Source</dct:title>
+        <dct:description xml:lang="en">
+            Open source licenses are licenses that comply with the Open Source Definition — in brief, they allow software to be freely used, modified, and shared.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#commercial">
+        <rdf:type rdf:resource="#Licence"/>
+        <dct:title xml:lang="en">Commercial</dct:title>
+        <dct:description xml:lang="en">
+            Commercial
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#trial">
+        <rdf:type rdf:resource="#Licence"/>
+        <dct:title xml:lang="en">Trial or demo</dct:title>
+        <dct:description xml:lang="en">
+            Trial or demo
+        </dct:description>
+    </rdf:Description>
+
+    <!--// ### EARL 2.0 instances - Scope ### //-->
+
+    <rdf:Description rdf:about="#webPage">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Single web pages</dct:title>
+        <dct:description xml:lang="en">
+            The tool evaluates the accessibility of an individual web page.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#webSite">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Groups of web pages or web sites</dct:title>
+        <dct:description xml:lang="en">
+            The tool evaluates the accessibility of a group of web pages, normally included in the same website.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#colorContrast">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Color contrast</dct:title>
+        <dct:description xml:lang="en">
+            The tool is specific to assess the appropriate contrast between colors.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#desktopApplication">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Desktop Application</dct:title>
+        <dct:description xml:lang="en">
+            The tool evaluates the accessibility of a desktop application.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#document">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Document</dct:title>
+        <dct:description xml:lang="en">
+            The tool evaluates the accessibility of the content of a document, such as pdf, docx, pptx, xslx, epub, video , animation.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#javascriptCode">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Javascript Code</dct:title>
+        <dct:description xml:lang="en">
+            The tool analyzes the existence of accessibility problems if a certain JavaScript code is executed.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#mobileApplication">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Mobile Application</dct:title>
+        <dct:description xml:lang="en">
+            The tool detects accessibility problems in a smartphone or tablet application.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#software">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Software</dct:title>
+        <dct:description xml:lang="en">
+            The tool (usually a checklist) can help evaluate the accessibility of any non-web software.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#textReadability">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">Text Readability</dct:title>
+        <dct:description xml:lang="en">
+            The tool is specific to evaluate the readability of a piece of text..
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#userInterface">
+        <rdf:type rdf:resource="#Scope"/>
+        <dct:title xml:lang="en">User Interface</dct:title>
+        <dct:description xml:lang="en">
+            The tool (usually an assistive technology or an user simulator) helps to evaluate possible accessibility problems presented by the user interface of any type of application or document.
+        </dct:description>
+    </rdf:Description>
+
+    <!--// ### EARL 2.0 instances - WebTechnology ### //-->
+
+    <rdf:Description rdf:about="#css">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">CSS - Cascading Style Sheets</dct:title>
+        <dct:description xml:lang="en">
+            CSS is a language that describes the style of an HTML document.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#html">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">HTML - Hypertext Markup Language</dct:title>
+        <dct:description xml:lang="en">
+            This specification defines the HyperText Markup Language (HTML), the publishing language of the World Wide Web. This specification defines HTML 4.01, which is a subversion of HTML 4.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#xhtml">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">HTML - eXtensible Hypertext Markup Language</dct:title>
+        <dct:description xml:lang="en">
+            This specification defines the HyperText Markup Language (HTML), the publishing language of the World Wide Web. This specification defines HTML 4.01, which is a subversion of HTML 4.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#aria">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">WAI ARIA</dct:title>
+        <dct:description xml:lang="en">
+            The Accessible Rich Internet Applications Suite, defines a way to make Web content and Web applications more accessible to people with disabilities. It especially helps with dynamic content and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#pdfDocument">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">PDF Document</dct:title>
+        <dct:description xml:lang="es">
+            Documentos PDF: Documento de formato portable
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#officeDocument">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">MS Office Document</dct:title>
+        <dct:description xml:lang="es">
+            Documentos de Microsoft Office: Documento de la suite de Microsoft Office, como Word, Power Point, Excel, etc.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#openDocument">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">Open Document (ODF)</dct:title>
+        <dct:description xml:lang="en">
+            Documentos abiertos: Documentos con formato OpenDocumento (ODF).
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#smil">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">SMIL (Synchronized Multimedia Integration Language)</dct:title>
+        <dct:description xml:lang="en">
+            SMIL (Synchronized Multimedia Integration Language): Lenguaje de integración multimedia sincronizada.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#svg">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">SVG (Scalable Vector Graphics)</dct:title>
+        <dct:description xml:lang="en">
+            SVG (Scalable Vector Graphics)
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#text">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">Plain text</dct:title>
+        <dct:description xml:lang="es">
+            Texto plano.  Documentos o extractos con formato de texto plano
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#multimedia">
+        <rdf:type rdf:resource="#WebTechnology"/>
+        <dct:title xml:lang="en">Multimedia files</dct:title>
+        <dct:description xml:lang="es">
+            Multimedia: Archivos multimedia como imágenes, audio y videos.
+        </dct:description>
+    </rdf:Description>
+
+    <!--// ### EARL 2.0 instances - TypeTool ### //-->
+
+    <rdf:Description rdf:about="#applicationPlugin">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Plugin para aplicaciones</dct:title>
+        <dct:description xml:lang="es">
+            Herramienta como extensión de alguna aplicación conocida sea web o de escritorio.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#authoringToolPlugin">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Plugin para herramientas de creación de contenido</dct:title>
+        <dct:description xml:lang="es">
+            Herramienta como extensión de alguna aplicación o herramienta para creación de contenido.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#browserPlugin">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Plugin para navegador web</dct:title>
+        <dct:description xml:lang="es">
+            Herramienta como extensión para un navegador web
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#commandLine">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Línea de comandos</dct:title>
+        <dct:description xml:lang="es">
+            Herramienta es ejecutada desde el Shell de sistema operativo
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#desktopApplicationType">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Aplicación de escritorio</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta es una aplicación de escritorio a instalarse en un sistema operativo local
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#documentGuide">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Documento guia</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta es un simple documento que asiste o guía en la evaluación de accesibilidad de un contenido o en la generación de informes
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#mobilApplicationType">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Aplicación móvil</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta es una aplicación para instalar en un dispositivo móvil, como puede ser un teléfono inteligente o una tableta
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#onDemandService">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Servicio por demanda</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta está disponible para el usuario como un servicio que este debe solicitar formalmente por medio de un registro
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#onlineTool">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="en">Online Tool</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta es publica y puede ser usada de manera directa por medio de un navegador web.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#testingLibrary">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Testing Library</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta es una librería que puede ser utilizada por los evaluadores o desarrolladores para crear su propia herramienta
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#webAPI">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Web API</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta no es publica, pero se descargar e instalar en un servidor web local para su uso
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#webApplication">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Web Application</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta es de tipo web pero no se encuentra publica, pudiendosela descargar e instalar en un servidor web local para su uso.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#webForm">
+        <rdf:type rdf:resource="#TypeTool"/>
+        <dct:title xml:lang="es">Web Form</dct:title>
+        <dct:description xml:lang="es">
+            La herramienta es una página web simple que incluye un formulario que se puede descargar y usar en modo local como un documento simple, sin la funcionalidad asociada con un servidor.
+        </dct:description>
+    </rdf:Description>
+
+    
+
+
+
+    <!--// ### EARL 2.0 instances - REQUEST ### //-->
+
+    <rdf:Description rdf:about="#error">
+        <rdf:type rdf:resource="#ResultType"/>
+        <dct:title xml:lang="en">Error</dct:title>
+        <dct:description xml:lang="en">
+            Error found in testing
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#warning">
+        <rdf:type rdf:resource="#ResultType"/>
+        <dct:title xml:lang="en">Warning</dct:title>
+        <dct:description xml:lang="en">
+            Warning when processing test, required confirmation
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#assistiveTechnology">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Assistive Technology</dct:title>
+        <dct:description xml:lang="en">
+            It is a software tool that is used by people with disabilities, which allows you to test accessibility by putting yourself in the user's place. The specific type of technology is indicated in parentheses, such as: Braille Interface, Magnifier, Screen Reader, Switch Interface, Text Web Browser, User Interface Customizer, Voice Assistant
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#automaticTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Automatic Evaluation Tool</dct:title>
+        <dct:description xml:lang="en">
+            Tool that checks accessibility automatically
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#checklistTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Checklist</dct:title>
+        <dct:description xml:lang="en">
+            It is a list (it can be a simple document) that helps to record the compliance or not of accessibility requirements
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#monitoringService">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Monitoring Service</dct:title>
+        <dct:description xml:lang="en">
+            It is a service, normally paid, that obtains accessibility reports, either instantaneously, or after a set deadline when the report is completed with content provided by experts or users with disabilities
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#remediationTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">Remediation Tool</dct:title>
+        <dct:description xml:lang="en">
+            Tool that automatically corrects accessibility errors, usually in a web page
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#simulatorTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
+        <dct:title xml:lang="en">User Simulator Tool</dct:title>
+        <dct:description xml:lang="en">
+            Software that simulates some type of user, for example users with a visual disability, that allows to put themselves in the user's place to check the barriers offered by the content accessed with the simulated disability.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#visualizationTool">
+        <rdf:type rdf:resource="#CategoryTool"/>
         <dct:title xml:lang="en">Visualization Tool</dct:title>
         <dct:description xml:lang="en">
             Tool that displays or marks elements of a web page or, in general, the user interface on the screen, helping the evaluator to check certain accessibility requirements.
