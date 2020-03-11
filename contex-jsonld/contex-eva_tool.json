@@ -1,5 +1,6 @@
 {
     "@context": {
+      "EvaluationTool": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#EvaluationTool",
       "@vocab": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#",
       "earl2": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#",
       "doap": "http://usefulinc.com/ns/doap#",
@@ -14,9 +15,12 @@
       "title": "dct:title",
       "description": "doap:description",
       "created": "doap:created",
-      "homepage": "doap:homepage",
+      "homepage": { 
+        "@id": "doap:homepage", 
+        "@type": "@id"
+      },
       "aboutAccessibility": { "@id": "schema:url", "@type":"@id"},
-      "assistsBy": { "@id": "earl2:Assistance", "@container" : "@list"},
+      "assistsBy": { "@id": "earl2:Assistance", "@type":"@id", "@container" : "@list"},
       "category": { "@id": "earl2:CategoryTool", "@type":"@id"},
       "guidelines": { "@id": "earl2:Guideline", "@container" : "@list"}, 
       "languages": { "@id": "dct:language", "@container" : "@list"},  
