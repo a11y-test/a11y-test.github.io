@@ -20,16 +20,16 @@
         "@type": "@id"
       },
       "aboutAccessibility": { "@id": "schema:url", "@type":"@id"},
-      "assistsBy": { "@id": "earl2:Assistance", "@type":"@id", "@container" : "@list"},
-      "category": { "@id": "earl2:CategoryTool", "@type":"@id"},
+      "assistsBy": { "@id": "earl2:assistsBy", "@type":"@id", "@container" : "@list"},
+      "category": { "@id": "earl2:category", "@type":"@id"},
       "guidelines": { "@id": "earl2:Guideline", "@container" : "@list"}, 
       "languages": { "@id": "dct:language", "@container" : "@list"},  
       "license": { 
-        "@id": "earl2:License", 
+        "@id": "earl2:license", 
         "@type":"@id"
       },
       "release": { "@type": "doap:Version"},
-      "scopes": { "@id": "earl2:Scope", "@type":"@id", "@container" : "@list"},
+      "scopes": { "@id": "earl2:scope", "@type":"@id", "@container" : "@list"},
       "sopportedFormats": { "@id": "earl2:WebTechnology", "@type":"@id", "@container" : "@list"},
       "type": { "@id": "earl2:TypeTool", "@type":"@id"},
       "vendor" : "doap:vendor"
