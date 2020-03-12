@@ -20,19 +20,31 @@
         "@id": "doap:homepage", 
         "@type": "@id"
       },
-      "aboutAccessibility": { "@id": "earl2:aboutAccessibility", "@type":"@id"},
-      "assistsBy": { "@id": "earl2:assistsBy", "@type":"@id"},
-      "category": { "@id": "earl2:category", "@type":"@id"},
-      "guidelines": { "@id": "earl2:guideline", "@type": "@id"}, 
-      "language": { "@id": "earl2:language" },  
+      "aboutAccessibility": { 
+        "@id": "earl2:aboutAccessibility", 
+        "@type":"@id"
+      },
+      "assistsBy": { 
+        "@id": "earl2:assistsBy", 
+        "@type":"@id"
+      },
+      "categoryTool": { 
+        "@id": "earl2:categoryTool", 
+        "@type":"@id"
+      },
+      "guidelines": { 
+        "@id": "earl2:guideline", 
+        "@type": "@id"
+      }, 
+      "languages": { "@type": "earl2:language" },  
       "license": { 
         "@id": "earl2:license", 
         "@type":"@id"
       },
       "release": { "@type": "earl2:release"},
-      "scope": { "@id": "earl2:scope", "@type":"@id"},
-      "supportedFormat": { "@id": "earl2:supportedFormat", "@type":"@id"},
-      "type": { "@id": "earl2:TypeTool", "@type":"@id"},
+      "scopes": { "@id": "earl2:scope", "@type":"@id"},
+      "supportedFormats": { "@id": "earl2:supportedFormat", "@type":"@id"},
+      "typeTool": { "@id": "earl2:typeTool", "@type":"@id"},
       "vendor" : "doap:vendor"
     } 
 }

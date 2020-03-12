@@ -104,7 +104,7 @@
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#cagegory">
+    <rdf:Property rdf:about="#categoryTool">
         <rdfs:label>category tool</rdfs:label>
         <rdfs:comment xml:lang="es">Categoría de la herramienta según el tipo de servicio proporcionado</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
