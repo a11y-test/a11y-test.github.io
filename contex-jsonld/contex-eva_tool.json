@@ -24,7 +24,7 @@
       "assistsBy": { "@id": "earl2:assistsBy", "@type":"@id"},
       "category": { "@id": "earl2:category", "@type":"@id"},
       "guidelines": { "@id": "earl2:guideline", "@type": "@id"}, 
-      "language": { "@id": "earl2:language"},  
+      "language": { "@id": "earl2:language" },  
       "license": { 
         "@id": "earl2:license", 
         "@type":"@id"
@@ -34,4 +34,5 @@
       "supportedFormat": { "@id": "earl2:supportedFormat", "@type":"@id"},
       "type": { "@id": "earl2:TypeTool", "@type":"@id"},
       "vendor" : "doap:vendor"
+    }
 }
