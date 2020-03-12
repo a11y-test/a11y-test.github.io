@@ -113,9 +113,9 @@
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#guidelines">
-        <rdfs:label>guidelines</rdfs:label>
-        <rdfs:comment>Estándares soportados por la herramienta</rdfs:comment>
+    <rdf:Property rdf:about="#guideline">
+        <rdfs:label>guideline</rdfs:label>
+        <rdfs:comment>Estándar soportados por la herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
         <rdfs:range rdf:resource="#Guideline"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -133,11 +133,11 @@
     </rdf:Property>
     
 
-    <rdf:Property rdf:about="#licence">
+    <rdf:Property rdf:about="#license">
         <rdfs:label>license type</rdfs:label>
         <rdfs:comment xml:lang="es">Tipo de licencia o condiciones de uso de la herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
-        <rdfs:range rdf:resource="#Licence"/>
+        <rdfs:range rdf:resource="#License"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
@@ -152,28 +152,28 @@
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
     
-    <rdf:Property rdf:about="#scopes">
-        <rdfs:label>scopes</rdfs:label>
+    <rdf:Property rdf:about="#scope">
+        <rdfs:label>Scope of evaluation</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#" />
-        <rdfs:comment>Ámbitos de evaluación que permite la herramienta</rdfs:comment>
+        <rdfs:comment xml:lang="es">Ámbito de evaluación que permite la herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
         <rdfs:range rdf:resource="#Scope"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#sopportedFormats">
-        <rdfs:label>sopported Formats</rdfs:label>
-        <rdfs:comment>Tecnologías web posibles de verificar por la herramienta</rdfs:comment>
+    <rdf:Property rdf:about="#sopportedFormat">
+        <rdfs:label>Sopported format</rdfs:label>
+        <rdfs:comment xml:lang="es">Tecnología web posibles de verificar por la herramienta</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
         <rdfs:range rdf:resource="#WebTechnology"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#type">
-        <rdfs:label>type tool</rdfs:label>
-        <rdfs:comment>Tipo de herramienta de acuerdo con la forma de uso</rdfs:comment>
+    <rdf:Property rdf:about="#typeTool">
+        <rdfs:label>Type tool</rdfs:label>
+        <rdfs:comment xml:lang="es">Tipo de herramienta de acuerdo con la forma de uso</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
         <rdfs:range rdf:resource="#TypeTool"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -589,7 +589,7 @@
     <!--// ### EARL 2.0 instances - License ### //-->
 
     <rdf:Description rdf:about="#freeSoftware">
-        <rdf:type rdf:resource="#Licence"/>
+        <rdf:type rdf:resource="#License"/>
         <dct:title xml:lang="en">Free Software</dct:title>
         <dct:description xml:lang="en">
             A free-software license is a notice that grants the recipient of a piece of software extensive rights to modify and redistribute that software.
@@ -597,7 +597,7 @@
     </rdf:Description>
 
     <rdf:Description rdf:about="#openSource">
-        <rdf:type rdf:resource="#Licence"/>
+        <rdf:type rdf:resource="#License"/>
         <dct:title xml:lang="en">Open Source</dct:title>
         <dct:description xml:lang="en">
             Open source licenses are licenses that comply with the Open Source Definition — in brief, they allow software to be freely used, modified, and shared.
@@ -605,7 +605,7 @@
     </rdf:Description>
 
     <rdf:Description rdf:about="#commercial">
-        <rdf:type rdf:resource="#Licence"/>
+        <rdf:type rdf:resource="#License"/>
         <dct:title xml:lang="en">Commercial</dct:title>
         <dct:description xml:lang="en">
             Commercial
@@ -613,7 +613,7 @@
     </rdf:Description>
 
     <rdf:Description rdf:about="#trial">
-        <rdf:type rdf:resource="#Licence"/>
+        <rdf:type rdf:resource="#License"/>
         <dct:title xml:lang="en">Trial or demo</dct:title>
         <dct:description xml:lang="en">
             Trial or demo

@@ -20,18 +20,18 @@
         "@type": "@id"
       },
       "aboutAccessibility": { "@id": "schema:url", "@type":"@id"},
-      "assistsBy": { "@id": "earl2:assistsBy", "@type":"@id", "@container" : "@list"},
+      "assistsBy": { "@id": "earl2:assistsBy", "@type":"@id"},
       "category": { "@id": "earl2:category", "@type":"@id"},
-      "guidelines": { "@id": "earl2:Guideline", "@container" : "@list"}, 
-      "languages": { "@id": "dct:language", "@container" : "@list"},  
+      "guidelines": { "@id": "earl2:guideline", "@type": "@id"}, 
+      "languages": { "@id": "dct:language"},  
       "license": { 
         "@id": "earl2:license", 
         "@type":"@id"
       },
       "release": { "@type": "doap:Version"},
-      "scopes": { "@id": "earl2:scope", "@type":"@id", "@container" : "@list"},
-      "sopportedFormats": { "@id": "earl2:WebTechnology", "@type":"@id", "@container" : "@list"},
-      "type": { "@id": "earl2:TypeTool", "@type":"@id"},
+      "scope": { "@id": "earl2:scope", "@type":"@id"},
+      "sopportedFormat": { "@id": "earl2:sopportedFormat", "@type":"@id"},
+      "type": { "@id": "earl2:typeTool", "@type":"@id"},
       "vendor" : "doap:vendor"
     }
 }
