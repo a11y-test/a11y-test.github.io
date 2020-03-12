@@ -36,7 +36,7 @@
         "@id": "earl2:guideline", 
         "@type": "@id"
       }, 
-      "languages": { "@type": "earl2:language" },  
+      "languages": { "@id": "earl2:language" },  
       "license": { 
         "@id": "earl2:license", 
         "@type":"@id"
