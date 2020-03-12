@@ -34,5 +34,5 @@
       "supportedFormat": { "@id": "earl2:supportedFormat", "@type":"@id"},
       "type": { "@id": "earl2:TypeTool", "@type":"@id"},
       "vendor" : "doap:vendor"
-    }
+    } 
 }
