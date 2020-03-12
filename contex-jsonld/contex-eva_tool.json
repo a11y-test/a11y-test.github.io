@@ -15,23 +15,23 @@
       "title": "dct:title",
       "description": "doap:description",
       "created": "doap:created",
+      "revision": "doap:revision",
       "homepage": { 
         "@id": "doap:homepage", 
         "@type": "@id"
       },
-      "aboutAccessibility": { "@id": "schema:url", "@type":"@id"},
+      "aboutAccessibility": { "@id": "earl2:aboutAccessibility", "@type":"@id"},
       "assistsBy": { "@id": "earl2:assistsBy", "@type":"@id"},
       "category": { "@id": "earl2:category", "@type":"@id"},
       "guidelines": { "@id": "earl2:guideline", "@type": "@id"}, 
-      "languages": { "@id": "dct:language"},  
+      "language": { "@id": "earl2:language"},  
       "license": { 
         "@id": "earl2:license", 
         "@type":"@id"
       },
-      "release": { "@type": "doap:Version"},
+      "release": { "@type": "earl2:release"},
       "scope": { "@id": "earl2:scope", "@type":"@id"},
-      "sopportedFormat": { "@id": "earl2:sopportedFormat", "@type":"@id"},
-      "type": { "@id": "earl2:typeTool", "@type":"@id"},
+      "supportedFormat": { "@id": "earl2:supportedFormat", "@type":"@id"},
+      "type": { "@id": "earl2:TypeTool", "@type":"@id"},
       "vendor" : "doap:vendor"
-    }
 }

@@ -122,12 +122,11 @@
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#title">
+    <rdf:Property rdf:about="#language">
         <rdfs:label>languages</rdfs:label>
         <rdfs:comment>Lista de idiomas soportados sea en la presentación de resultado o en el análisis</rdfs:comment>
         <rdfs:domain rdf:resource="#EvaluationTool"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language"/>
-        <rdfs:range rdf:resource="rdf:Literal"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
