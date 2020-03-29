@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<rdf:RDF 
+        xml:base=""
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl"
+        xmlns:earl="http://www.w3.org/ns/earl#"
+        xmlns:earl2="https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#"
+        xmlns:dct="http://purl.org/dc/terms/"
+        xmlns:schema="http://schema.org/"
+        xmlns:doap="http://usefulinc.com/ns/doap#"
+        xmlns:http="http://www.w3.org/2006/http#"
+        xmlns:cnt="http://www.w3.org/2008/content#"
+        xmlns:ptr="http://www.w3.org/2009/pointers#">
+
+    <rdf:Description rdf:about="#simulatorTool">
+        <rdf:type rdf:resource="earl2:CategoryTool"/>
+        <dct:title xml:lang="en">User Simulator Tool</dct:title>
+        <dct:description xml:lang="en">
+            Software that simulates some type of user, for example users with a visual disability, that allows to put themselves in the user's place to check the barriers offered by the content accessed with the simulated disability.
+        </dct:description>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#visualizationTool">
+        <rdf:type rdf:resource="earl2:CategoryTool"/>
+        <dct:title xml:lang="en">Visualization Tool</dct:title>
+        <dct:description xml:lang="en">
+            Tool that displays or marks elements of a web page or, in general, the user interface on the screen, helping the evaluator to check certain accessibility requirements.
+        </dct:description>
+    </rdf:Description>
+
+
+</rdf:RDF>
