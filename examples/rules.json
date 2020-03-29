@@ -1,0 +1,26 @@
+{
+    "@context": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/contex-jsonld/contex-rule.json",
+    "@graph": [
+        {
+            "title": "Usar unidades em para el tamaño de letra",
+            "description": "Especificar el tamaño de letra del texto en unidades em para que los agentes de usuario puedan escalar contenido de manera efectiva.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_144",
+                "wcag20:SuccessCriterion_145",
+                "wcag20:SuccessCriterion_148",
+                "wcag20:SuccessCriterion_149"
+            ],
+            "@id": "OAW35"
+        },
+        {
+            "title": "Usar espacios entre letras CSS para controlar el espaciado dentro de una palabra",
+            "description": "La propiedad de separación de letras de CSS ayuda a los desarrolladores a controlar la cantidad de espacios en blanco entre los caracteres. Esto se recomienda sobre la adición de caracteres en blanco para controlar el espaciado, ya que los caracteres en blanco pueden cambiar el significado y la pronunciación de la palabra.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_132",
+                "wcag20:SuccessCriterion_145",
+                "wcag20:SuccessCriterion_149"
+            ],
+            "@id": "OAW36"
+        }
+	]
+}
