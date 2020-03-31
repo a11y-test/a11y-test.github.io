@@ -179,6 +179,43 @@
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </rdf:Property>
     
+    <!--// ### EARL 2.0 properties - RULE ### //-->
+
+     <rdf:Property rdf:about="#relatedTo">
+        <rdfs:label>Related To</rdfs:label>
+        <rdfs:comment xml:lang="es">Requerimiento de alto nivel con el que tiene relación el caso de prueba</rdfs:comment>
+        <rdfs:domain rdf:resource="earl:TestCase"/>
+        <rdfs:range rdf:resource="earl:TestRequirement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#actions">
+        <rdfs:label>Actions</rdfs:label>
+        <rdfs:comment xml:lang="es">Descripción del procedimiento o las acciones realizadas para ejecutar el caso de prueba</rdfs:comment>
+        <rdfs:domain rdf:resource="earl:TestCase"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#summary">
+        <rdfs:label>Summary</rdfs:label>
+        <rdfs:comment xml:lang="es">Descripción breve de la regla o caso de prueba</rdfs:comment>
+        <rdfs:domain rdf:resource="earl:TestCase"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#purpose">
+        <rdfs:label>Purpose</rdfs:label>
+        <rdfs:comment xml:lang="es">Propósito del cumplimiento o éxito de caso de prueba</rdfs:comment>
+        <rdfs:domain rdf:resource="earl:TestCase"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Property>
 
     <!-- 
 
