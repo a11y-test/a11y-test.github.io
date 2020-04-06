@@ -11,7 +11,6 @@
       "http": "http://www.w3.org/2006/http#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
 
-      "@type": "earl2:EvaluationResponse",
       "status": "earl2:TestSource",
       "title": "dct:title",
       "identifier": "dct:identifier",
