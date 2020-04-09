@@ -1,0 +1,410 @@
+{
+    "@context": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/contex-jsonld/contex-rule.json",
+    "@graph": [
+        {
+            "@id": "OAW35",
+            "@type": "earl:TestCase",
+            "title": "Use em units for font size",
+            "description": "Specify the font size of the text in em units so that user agents can scale content effectively.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.4.4",
+                "wcag20:SuccessCriterion_1.4.5",
+                "wcag20:SuccessCriterion_1.4.8",
+                "wcag20:SuccessCriterion_1.4.9"
+            ]
+        },
+        {
+            "@id": "OAW36",
+            "@type": "earl:TestCase",
+            "title": "Use spaces between CSS letters to control spacing within a word",
+            "description": "The CSS letter separation property helps developers control the amount of white space between characters. This is recommended over adding white characters to control spacing, since characters blank can change the meaning and pronunciation of the word. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.2",
+                "wcag20:SuccessCriterion_1.4.5",
+                "wcag20:SuccessCriterion_1.4.9"
+            ]
+        },
+        {
+            "@id": "OAW37",
+            "@type": "earl:TestCase",
+            "title": "Content positioning with absolute values",
+            "description": "In the case of using CSS styles, they must be structured in such a way that when they are ignored, the sequence and meaning of the content is not altered.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_2.4.1",
+                "wcag20:SuccessCriterion_1.3.2",
+                "wcag20:SuccessCriterion_1.4.5",
+                "wcag20:SuccessCriterion_1.4.9"
+            ]
+        },
+        {
+            "@id": "OAW38",
+            "@type": "earl:TestCase",
+            "title": "CSS left or right alignment specification",
+            "description": "Describes how to align text blocks, either left or right, by setting the CSS property text-align.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.4.8"
+            ]
+        },
+        {
+            "@id": "OAW39",
+            "@type": "earl:TestCase",
+            "title": "Use of CSS to hide part of the text of a link",
+            "description": "By hiding part of the information on the page, the user may be confused",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_2.4.4",
+                "wcag20:SuccessCriterion_2.4.9"
+            ]
+        },
+        {
+            "@id": "OAW40",
+            "@type": "earl:TestCase",
+            "title": "Change presentation when receiving focus",
+            "description": "Provide visual feedback when focusing an element or when the user points to it with a pointer.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.4.1",
+                "wcag20:SuccessCriterion_2.4.7"
+            ]
+        },
+        {
+            "@id": "OAW41",
+            "@type": "earl:TestCase",
+            "title": "Separation in text cells",
+            "description": "Tables must be correctly structured with respect to margins and text separators at the edges",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1"
+            ]
+        },
+        {
+            "@id": "OAW42",
+            "@type": "earl:TestCase",
+            "title": "The order of the DOM matches the visual order",
+            "description": "In the case of using CSS styles, they should not be structured in such a way that when they are ignored, the sequence and meaning of the content is altered. For the @graph indicated above, verify.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.2",
+                "wcag20:SuccessCriterion_2.4.3"
+            ]
+        },
+        {
+            "@id": "OAW6",
+            "@type": "earl:TestCase",
+            "title": "Combining links with adjacent images and links to the same resource",
+            "description": "The goal of this technique is to provide both text and iconic link representations without making the web page more confusing or difficult for keyboard users or assistive technology users",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1",
+                "wcag20:SuccessCriterion_2.4.4",
+                "wcag20:SuccessCriterion_2.4.9"
+            ]
+        },
+        {
+            "@id": "OAW7",
+            "@type": "earl:TestCase",
+            "title": "Textual alternatives in <area> elements",
+            "description": "It is essential to use the textual alternative in the image maps and each of its contained areas",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1",
+                "wcag20:SuccessCriterion_2.4.4",
+                "wcag20:SuccessCriterion_2.4.9"
+            ]
+        },
+        {
+            "@id": "OAW11",
+            "@type": "earl:TestCase",
+            "title": "Provide a title using the title element",
+            "description": "All HTML and XHTML documents, including those in individual frames in a frameset, have a heading element in the header section that defines the purpose of the document in a single sentence.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_2.4.2"
+            ]
+        },
+        {
+            "@id": "OAW12",
+            "@type": "earl:TestCase",
+            "title": "Provide information about the purpose of the links",
+            "description": "The purpose of the links needs to be described. This allows users to distinguish one link from another on the web page and help the user determine whether to follow the link. The destination URI is generally not sufficient descriptive.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_2.4.4",
+                "wcag20:SuccessCriterion_2.4.9"
+            ]
+        },
+        {
+            "@id": "OAW14",
+            "@type": "earl:TestCase",
+            "title": "Textual alternatives in <object> elements",
+            "description": "Provide a textual alternative for rendered content using the <object> element",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1"
+            ]
+        },
+        {
+            "@id": "OAW16",
+            "@type": "earl:TestCase",
+            "title": "Textual alternatives in <img> elements",
+            "description": "When using the <img> element, a short text alternative must be specified with the [alt] attribute. The value of this attribute is known as \"alternative text\". The alternative text should reproduce the same function on the page as the image. Please note that it does not necessarily describe the visual characteristics of the image itself, but must convey the same meaning as the image. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1"
+            ]
+        },
+        {
+            "@id": "OAW18",
+            "@type": "earl:TestCase",
+            "title": "Correct definition lists",
+            "description": "Make sure that the <dl> elements are structured correctly",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.1.3"
+            ]
+        },
+        {
+            "@id": "OAW20",
+            "@type": "earl:TestCase",
+            "title": "Using <noembed> elements with <embed>",
+            "description": "The purpose of this technique is to provide alternative content for the <embed> element in a <noembed> element. The <noembed> is displayed only if the <embed> is unsupported.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1",
+                "wcag20:SuccessCriterion_1.2.8"
+            ]
+        },
+        {
+            "@id": "OAW22",
+            "@type": "earl:TestCase",
+            "title": "Use of title attribute on <frame> and <iframe> elements",
+            "description": "Use of the [title] attribute is required to describe the contents of each frame. This provides a tag for users to determine which frame to enter and explore in detail. In HTML5, the <frame> element is marked as deprecated. The <iframe> element is still part of the HTML5 specification. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_4.1.2"
+            ]
+        },
+        {
+            "@id": "OAW26",
+            "@type": "earl:TestCase",
+            "title": "Use of target attribute to open new windows",
+            "description": "Avoid confusions that can be caused by the appearance of new windows that were not requested by the user. Suddenly, opening new windows can disorient users or be completely lost for some.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.2.5"
+            ]
+        },
+        {
+            "@id": "OAW27",
+            "@type": "earl:TestCase",
+            "title": "Language attributes in the html element",
+            "description": "Identify the default language of a document by providing the lang and/or xml: lang attribute on the <html> element",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.1.1"
+            ]
+        },
+        {
+            "@id": "OAW28",
+            "@type": "earl:TestCase",
+            "title": "Language changes in the elements",
+            "description": "Clearly identify any changes in the language of a page by using the lang or xml: lang attribute, as appropriate for the HTML or XHTML version you are using.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.1.2"
+            ]
+        },
+        {
+            "@id": "OAW29",
+            "@type": "earl:TestCase",
+            "title": "Use of link element and relationship with other pages",
+            "description": "Describe how the <link> element can provide metadata about the position of an HTML page within a set of web pages or can help locate content with a set of web pages. The value of the attributes [ rel] indicates what @type of relationship is being described, and the [href] attribute provides a link to the document that has that relationship",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_2.4.8",
+                "wcag20:SuccessCriterion_2.4.5"
+            ]
+        },
+        {
+            "@id": "OAW30",
+            "@type": "earl:TestCase",
+            "title": "Use of link element to define glossaries",
+            "description": "Provide a mechanism for locating a glossary. When content terms are defined on a separate glossary page, the glossary is referenced using a <link> element in the <head> element of the document you are using the glossary. The [rel] attribute of the <link> element is set to \"glossary\", and the [href] attribute contains the URI of the glossary page. User agents can help users access the glossary quickly and easily",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.1.3",
+                "wcag20:SuccessCriterion_3.1.4"
+            ]
+        },
+        {
+            "@id": "OAW31",
+            "@type": "earl:TestCase",
+            "title": "Correct use of <ruby> element",
+            "description": "Use the <ruby> annotation to provide information about pronunciation and the meaning of a series of texts whose meaning is determined by pronunciation.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.1.6"
+            ]
+        },
+        {
+            "@id": "OAW43",
+            "@type": "earl:TestCase",
+            "title": "Use of longdesc",
+            "description": "Provide information using the longdesc attribute when short textual alternatives do not adequately cover its function of providing information about the image. The longdesc attribute is a URI, the destination of which must contain a long description of non-textual content. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1"
+            ]
+        },
+        {
+            "@id": "OAW44",
+            "@type": "earl:TestCase",
+            "title": "Use null alt text and no [title] attributes in img elements for images AT should ignore",
+            "description": "Images that play a decorative role must be marked as such so that assistive technologies ignore them.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1"
+            ]
+        },
+        {
+            "@id": "OAW1",
+            "@type": "earl:TestCase",
+            "title": "Valid ARIA attributes",
+            "description": "ARIA roles are evaluated for validity",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_4.1.2"
+            ]
+        },
+        {
+            "@id": "OAW10",
+            "@type": "earl:TestCase",
+            "title": "Information that has movement, flickering, scrolling or updating automatically",
+            "description": "Using elements that are constantly moving on the page is not recommended. Auto moving text is a problem for people with certain @types of learning difficulties and people with low vision.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_2.2.1",
+                "wcag20:SuccessCriterion_2.2.2"
+            ]
+        },
+        {
+            "@id": "OAW8",
+            "@type": "earl:TestCase",
+            "title": "Textual alternatives for multimedia elements",
+            "description": "It is recommended to use textual alternative tracks in multimedia elements, since not all users have the same perspection. Captions @type tracks should not be confused with subtitle @type tracks. Subtitles provide text only of dialogue and do not include important sounds. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.2.2",
+                "wcag20:SuccessCriterion_1.2.4"
+            ]
+        },
+        {
+            "@id": "OAW9",
+            "@type": "earl:TestCase",
+            "title": "Decorative videos",
+            "description": "In case of having decorative videos, it is recommended to mark them as such with ARIA attributes, this avoids that users with assistive technologies have difficulties in finding videos without textual alternatives",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1",
+                "wcag20:SuccessCriterion_1.3.1"
+            ]
+        },
+        {
+            "@id": "OAW13",
+            "@type": "earl:TestCase",
+            "title": "Provide submit buttons",
+            "description": "It is necessary to provide a mechanism that allows users to request explicit @context changes. The intended use of a Submit button is to generate an HTTP request that sends data entered into a form.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.2.2"
+            ]
+        },
+        {
+            "@id": "OAW15",
+            "@type": "earl:TestCase",
+            "title": "Attributes in <input> image @type elements",
+            "description": "For <input> elements of @type 'image', the alt attribute of the <input> element is used to provide a functional label. This label indicates the function of the button, but does not attempt to describe the image. The label is especially important if there are multiple submit buttons on the page that lead to different results. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1"
+            ]
+        },
+        {
+            "@id": "OAW19",
+            "@type": "earl:TestCase",
+            "title": "Identifiers for form input fields",
+            "description": "In the case of making use of forms in the structure and page layout, do not forget to associate an identifier (label) to each input field of the form.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1",
+                "wcag20:SuccessCriterion_1.3.1",
+                "wcag20:SuccessCriterion_3.3.2",
+                "wcag20:SuccessCriterion_4.1.2"
+            ]
+        },
+        {
+            "@id": "OAW23",
+            "@type": "earl:TestCase",
+            "title": "Description and correct use of <fieldset> and <legend> elements",
+            "description": "Provide a semantic grouping for related form controls. This allows users to understand the relationship of the controls and to interact with the form more quickly and effectively. Form controls can be grouped by closing them inside the <fieldset> element. All controls within a given <fieldset> are then related. The first element within <fieldset> must be a <legend> element, which provides a label or description for the group",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.1",
+                "wcag20:SuccessCriterion_3.3.2"
+            ]
+        },
+        {
+            "@id": "OAW17",
+            "@type": "earl:TestCase",
+            "title": "Use of <caption> elements in tables",
+            "description": "In the case of making use of tables, these must be identified by means of the caption element, provided they are not used for layout. The <caption> element can be used whether the table includes or not the [summary] attribute. The <caption> element identifies the table while the [summary] attribute provides an overview of the purpose or explains how to navigate the table",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.1"
+            ]
+        },
+        {
+            "@id": "OAW24",
+            "@type": "earl:TestCase",
+            "title": "Use of [summary] attributes in tables",
+            "description": "Provide a brief description of how the data has been organized in a table or a brief explanation of how to navigate the table. The [summary] attribute of the <table> element makes this information available to people using screen readers, information is not displayed visually",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.1"
+            ]
+        },
+        {
+            "@id": "OAW21",
+            "@type": "earl:TestCase",
+            "title": "Use table markup to present tabular information",
+            "description": "Present tabular information so that relationships within the information are preserved even when users cannot see the table or change the presentation format. These relationships are represented in columns and rows, and columns and rows must be recognizable for logical relationships to be perceived",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.1"
+            ]
+        },
+        {
+            "@id": "OAW33",
+            "@type": "earl:TestCase",
+            "title": "Use of pseudo-elements: before and: after, and the content property in CSS",
+            "description": "It is not recommended to insert content from style sheets or by means of CSS code, since these can be deactivated and the content would be lost",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.1"
+            ]
+        },
+        {
+            "@id": "OAW34",
+            "@type": "earl:TestCase",
+            "title": "Invalid alternative texts",
+            "description": "If the text defined as a textual alternative cannot replace its corresponding non-textual element without losing information or functionality, then it fails since it is not actually a textual alternative to the element",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.1.1",
+                "wcag20:SuccessCriterion_1.2.1"
+            ]
+        },
+        {
+            "@id": "OAW45",
+            "@type": "earl:TestCase",
+            "title": "Use of styles that cause flickering",
+            "description": "Properties that cause text flickering at certain intervals that cannot be stopped by user interaction or Agent preferences. Flickering continues while the page is displayed.",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_2.2.2"
+            ]
+        },
+        {
+            "@id": "OAW46",
+            "@type": "earl:TestCase",
+            "title": "Use of space characters to control word spacing",
+            "description": "Using characters in whitespace, such as space, tab, line break, or carriage return, to visually format individual words can be a failure to render meaningful sequences correctly. When inserting blank characters To control the spacing between letters within a word, they can change the interpretation of the word or make it not be recognized programmatically as a single word. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_1.3.2"
+            ]
+        },
+        {
+            "@id": "OAW47",
+            "@type": "earl:TestCase",
+            "title": "Duplicate ID attributes",
+            "description": "Duplicate ID attributes cause problems for assistive technologies when trying to interact with content. Duplicate @type ID values ??can be problematic for user agents who rely on this attribute to accurately convey relationships between different parts of the content to users. ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_4.1.1"
+            ]
+        },
+        {
+            "@id": "OAW48",
+            "@type": "earl:TestCase",
+            "title": "Form submission without notice",
+            "description": "The form is automatically submitted when the user has completed all the fields or when the focus leaves the last field. There are two problems with this approach. Firstly, a disabled user who needs more @context can move the focus of the field on the instructions on how to fill the form or other text, accidentally submitting the form The other is that with some form elements the value of the field changes as you navigate each element with the keyboard, resending accidentally the form. Better to resort to using a submit button and the [Enter] key, ",
+            "relatedTo": [
+                "wcag20:SuccessCriterion_3.2.2"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "earl2": "https://raw.githubusercontent.com/a11y-test/a11y-test.github.io/master/vocab/earl2#",
+        "earl": "http://www.w3.org/ns/earl#",
+        "dct": "http://purl.org/dc/terms/",
+
+        "identifier": "dct:identifier",
+        "title": "dct:title",
+        "description": "dct:description",
+        "relatedTo": { 
+            "@id": "earl2:relatedTo", 
+            "@type":"@id"
+        },
+        "acctions": "earl2:acctions",
+        "summary": "earl2:summary",
+        "purpose": "earl2:purpose",
+        "isPartOf": { 
+            "@id": "earl2:isPartOf", 
+            "@type":"@id"
+        },
+        "disabilityRelated": "earl2:disabilityRelated"
+    }
+}
